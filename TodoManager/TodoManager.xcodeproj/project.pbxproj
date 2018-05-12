@@ -22,6 +22,8 @@
 		71DA524A20A7141300BBC917 /* CustomTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DA524820A7141300BBC917 /* CustomTableView.xib */; };
 		71DA524B20A7141300BBC917 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA524920A7141300BBC917 /* CustomTableView.swift */; };
 		71DA524D20A7142E00BBC917 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA524C20A7142E00BBC917 /* TasksViewController.swift */; };
+		71DA524F20A7147300BBC917 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA524E20A7147300BBC917 /* ApplicationController.swift */; };
+		71DA525120A7147C00BBC917 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA525020A7147C00BBC917 /* MainRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		71DA524820A7141300BBC917 /* CustomTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableView.xib; sourceTree = "<group>"; };
 		71DA524920A7141300BBC917 /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		71DA524C20A7142E00BBC917 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		71DA524E20A7147300BBC917 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
+		71DA525020A7147C00BBC917 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 		71DA520D20A6D85400BBC917 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				71DA524E20A7147300BBC917 /* ApplicationController.swift */,
 				71DA522A20A6F87500BBC917 /* Common */,
 				71DA520E20A6D85400BBC917 /* Main */,
 			);
@@ -233,6 +238,7 @@
 		71DA521520A6D85400BBC917 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				71DA525020A7147C00BBC917 /* MainRouter.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -460,9 +466,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DA523D20A7054600BBC917 /* BaseViewController.swift in Sources */,
+				71DA524F20A7147300BBC917 /* ApplicationController.swift in Sources */,
 				71DA523720A7039C00BBC917 /* CustomViewController.swift in Sources */,
 				71DA522620A6D85400BBC917 /* AppDelegate.swift in Sources */,
 				71DA524420A7138500BBC917 /* Router.swift in Sources */,
+				71DA525120A7147C00BBC917 /* MainRouter.swift in Sources */,
 				71DA523420A7034A00BBC917 /* CustomViewProvider.swift in Sources */,
 				71DA524B20A7141300BBC917 /* CustomTableView.swift in Sources */,
 				71DA524620A713A400BBC917 /* WindowHelper.swift in Sources */,
