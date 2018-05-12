@@ -17,6 +17,8 @@
 		71DA523720A7039C00BBC917 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA523620A7039C00BBC917 /* CustomViewController.swift */; };
 		71DA523D20A7054600BBC917 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA523C20A7054600BBC917 /* BaseViewController.swift */; };
 		71DA523F20A705FC00BBC917 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA523E20A705FC00BBC917 /* UIView+LoadFromNib.swift */; };
+		71DA524420A7138500BBC917 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA524320A7138500BBC917 /* Router.swift */; };
+		71DA524620A713A400BBC917 /* WindowHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA524520A713A300BBC917 /* WindowHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		71DA523620A7039C00BBC917 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		71DA523C20A7054600BBC917 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		71DA523E20A705FC00BBC917 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
+		71DA524320A7138500BBC917 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		71DA524520A713A300BBC917 /* WindowHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				71DA523320A7034A00BBC917 /* CustomViewProvider.swift */,
+				71DA524320A7138500BBC917 /* Router.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				71DA523E20A705FC00BBC917 /* UIView+LoadFromNib.swift */,
+				71DA524520A713A300BBC917 /* WindowHelper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -437,7 +443,9 @@
 				71DA523D20A7054600BBC917 /* BaseViewController.swift in Sources */,
 				71DA523720A7039C00BBC917 /* CustomViewController.swift in Sources */,
 				71DA522620A6D85400BBC917 /* AppDelegate.swift in Sources */,
+				71DA524420A7138500BBC917 /* Router.swift in Sources */,
 				71DA523420A7034A00BBC917 /* CustomViewProvider.swift in Sources */,
+				71DA524620A713A400BBC917 /* WindowHelper.swift in Sources */,
 				71DA522420A6D85400BBC917 /* TodoManager.xcdatamodeld in Sources */,
 				71DA523F20A705FC00BBC917 /* UIView+LoadFromNib.swift in Sources */,
 			);
