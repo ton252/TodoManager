@@ -16,14 +16,42 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        bindEvents()
+        loadTasks()
     }
     
+    
+    // MARK: - Bind Events
+    
+    private func bindEvents() {
+        presentationModel.updateStateHandler = { [unowned self] state in
+            switch state {
+            case .rich:
+                self.customView.tableView.reloadData()
+            case .loading:
+                break
+            case .zero(_):
+                break
+            }
+            
+        }
+    }
+    
+    private func loadTasks() {
+        presentationModel.loadTasks()
+    }
     
     // MARK: - Configure UI
     
     private func configureUI() {
+        configureTableView()
         addSegmentControll()
         addAddBarButtonItem()
+    }
+    
+    private func configureTableView() {
+        customView.tableView.dataSource = presentationModel
+        customView.tableView.register(presentationModel.possibleCellClasses)
     }
     
     private func addSegmentControll() {

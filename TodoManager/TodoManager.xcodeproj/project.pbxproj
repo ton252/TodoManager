@@ -33,6 +33,10 @@
 		71DA526D20A7261600BBC917 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526C20A7261600BBC917 /* LayoutHelper.swift */; };
 		71DA526F20A728B300BBC917 /* MVPMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526E20A728B300BBC917 /* MVPMViewController.swift */; };
 		71DA527120A7299200BBC917 /* TasksListPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA527020A7299200BBC917 /* TasksListPresentationModel.swift */; };
+		71DA527320A72A6C00BBC917 /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA527220A72A6C00BBC917 /* TaskCellView.swift */; };
+		71DA527520A72AA600BBC917 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA527420A72AA600BBC917 /* TaskViewModel.swift */; };
+		71DA527720A72B3500BBC917 /* TaskCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DA527620A72B3500BBC917 /* TaskCellView.xib */; };
+		71DA527920A7329D00BBC917 /* UITableView+CellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA527820A7329D00BBC917 /* UITableView+CellHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,10 @@
 		71DA526C20A7261600BBC917 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		71DA526E20A728B300BBC917 /* MVPMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPMViewController.swift; sourceTree = "<group>"; };
 		71DA527020A7299200BBC917 /* TasksListPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListPresentationModel.swift; sourceTree = "<group>"; };
+		71DA527220A72A6C00BBC917 /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
+		71DA527420A72AA600BBC917 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		71DA527620A72B3500BBC917 /* TaskCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCellView.xib; sourceTree = "<group>"; };
+		71DA527820A7329D00BBC917 /* UITableView+CellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellHelper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +244,8 @@
 		71DA521120A6D85400BBC917 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				71DA527220A72A6C00BBC917 /* TaskCellView.swift */,
+				71DA527620A72B3500BBC917 /* TaskCellView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +261,7 @@
 		71DA521420A6D85400BBC917 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				71DA527420A72AA600BBC917 /* TaskViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -328,6 +339,7 @@
 				71DA524520A713A300BBC917 /* WindowHelper.swift */,
 				71DA526A20A725CB00BBC917 /* ContainerCell.swift */,
 				71DA526C20A7261600BBC917 /* LayoutHelper.swift */,
+				71DA527820A7329D00BBC917 /* UITableView+CellHelper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,6 +471,7 @@
 				71DA525D20A719C800BBC917 /* CustomTableView.xib in Resources */,
 				71DA522320A6D85400BBC917 /* LaunchScreen.storyboard in Resources */,
 				71DA522220A6D85400BBC917 /* Assets.xcassets in Resources */,
+				71DA527720A72B3500BBC917 /* TaskCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +515,8 @@
 			files = (
 				71DA523D20A7054600BBC917 /* BaseViewController.swift in Sources */,
 				71DA526920A71E3900BBC917 /* Unimplemented.swift in Sources */,
+				71DA527520A72AA600BBC917 /* TaskViewModel.swift in Sources */,
+				71DA527920A7329D00BBC917 /* UITableView+CellHelper.swift in Sources */,
 				71DA524F20A7147300BBC917 /* ApplicationController.swift in Sources */,
 				71DA525C20A719C800BBC917 /* CustomTableView.swift in Sources */,
 				71DA526020A71A4400BBC917 /* PresentationModel.swift in Sources */,
@@ -511,6 +526,7 @@
 				71DA526520A71B9400BBC917 /* BaseClosures.swift in Sources */,
 				71DA526D20A7261600BBC917 /* LayoutHelper.swift in Sources */,
 				71DA526F20A728B300BBC917 /* MVPMViewController.swift in Sources */,
+				71DA527320A72A6C00BBC917 /* TaskCellView.swift in Sources */,
 				71DA527120A7299200BBC917 /* TasksListPresentationModel.swift in Sources */,
 				71DA525120A7147C00BBC917 /* MainRouter.swift in Sources */,
 				71DA523420A7034A00BBC917 /* CustomViewProvider.swift in Sources */,
