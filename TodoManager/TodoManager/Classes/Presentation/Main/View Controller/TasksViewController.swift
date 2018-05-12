@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TasksViewController: CustomViewController<CustomTableView> {
+class TasksViewController: MVPMViewController<CustomTableView, TasksListPresentationModel> {
     
     
     // MARK: - ViewController LifeCycle

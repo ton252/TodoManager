@@ -32,6 +32,7 @@
 		71DA526B20A725CB00BBC917 /* ContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526A20A725CB00BBC917 /* ContainerCell.swift */; };
 		71DA526D20A7261600BBC917 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526C20A7261600BBC917 /* LayoutHelper.swift */; };
 		71DA526F20A728B300BBC917 /* MVPMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526E20A728B300BBC917 /* MVPMViewController.swift */; };
+		71DA527120A7299200BBC917 /* TasksListPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA527020A7299200BBC917 /* TasksListPresentationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		71DA526A20A725CB00BBC917 /* ContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCell.swift; sourceTree = "<group>"; };
 		71DA526C20A7261600BBC917 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		71DA526E20A728B300BBC917 /* MVPMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPMViewController.swift; sourceTree = "<group>"; };
+		71DA527020A7299200BBC917 /* TasksListPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListPresentationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 		71DA521020A6D85400BBC917 /* Presentation Model */ = {
 			isa = PBXGroup;
 			children = (
+				71DA527020A7299200BBC917 /* TasksListPresentationModel.swift */,
 			);
 			path = "Presentation Model";
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				71DA526520A71B9400BBC917 /* BaseClosures.swift in Sources */,
 				71DA526D20A7261600BBC917 /* LayoutHelper.swift in Sources */,
 				71DA526F20A728B300BBC917 /* MVPMViewController.swift in Sources */,
+				71DA527120A7299200BBC917 /* TasksListPresentationModel.swift in Sources */,
 				71DA525120A7147C00BBC917 /* MainRouter.swift in Sources */,
 				71DA523420A7034A00BBC917 /* CustomViewProvider.swift in Sources */,
 				71DA524620A713A400BBC917 /* WindowHelper.swift in Sources */,

@@ -14,8 +14,10 @@ final class MainRouter: Router {
     // MARK: - Public Methods
     
     func initialViewController() -> UINavigationController {
-        let vc = TasksViewController()
+        let pm = TasksListPresentationModel()
+        let vc = TasksViewController(presentationModel: pm)
         let nc = UINavigationController(rootViewController: vc)
+        
         return nc
     }
     
