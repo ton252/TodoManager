@@ -24,6 +24,11 @@
 		71DA525120A7147C00BBC917 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA525020A7147C00BBC917 /* MainRouter.swift */; };
 		71DA525C20A719C800BBC917 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA525A20A719C800BBC917 /* CustomTableView.swift */; };
 		71DA525D20A719C800BBC917 /* CustomTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DA525B20A719C800BBC917 /* CustomTableView.xib */; };
+		71DA526020A71A4400BBC917 /* PresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA525F20A71A4400BBC917 /* PresentationModel.swift */; };
+		71DA526220A71B2C00BBC917 /* ZeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526120A71B2C00BBC917 /* ZeroViewModel.swift */; };
+		71DA526520A71B9400BBC917 /* BaseClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526420A71B9400BBC917 /* BaseClosures.swift */; };
+		71DA526720A71D8B00BBC917 /* TablePresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526620A71D8B00BBC917 /* TablePresentationModel.swift */; };
+		71DA526920A71E3900BBC917 /* Unimplemented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526820A71E3900BBC917 /* Unimplemented.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		71DA525020A7147C00BBC917 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		71DA525A20A719C800BBC917 /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTableView.swift; path = TodoManager/Classes/Presentation/Common/View/CustomTableView/CustomTableView.swift; sourceTree = SOURCE_ROOT; };
 		71DA525B20A719C800BBC917 /* CustomTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomTableView.xib; path = TodoManager/Classes/Presentation/Common/View/CustomTableView/CustomTableView.xib; sourceTree = SOURCE_ROOT; };
+		71DA525F20A71A4400BBC917 /* PresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationModel.swift; sourceTree = "<group>"; };
+		71DA526120A71B2C00BBC917 /* ZeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroViewModel.swift; sourceTree = "<group>"; };
+		71DA526420A71B9400BBC917 /* BaseClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClosures.swift; sourceTree = "<group>"; };
+		71DA526620A71D8B00BBC917 /* TablePresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePresentationModel.swift; sourceTree = "<group>"; };
+		71DA526820A71E3900BBC917 /* Unimplemented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unimplemented.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +168,7 @@
 		71DA520920A6D85400BBC917 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				71DA526120A71B2C00BBC917 /* ZeroViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +282,7 @@
 		71DA522A20A6F87500BBC917 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				71DA525E20A71A2300BBC917 /* Presentation Model */,
 				71DA523520A7039000BBC917 /* View */,
 				71DA523220A7028D00BBC917 /* ViewController */,
 				71DA522B20A6F87C00BBC917 /* Helper */,
@@ -283,6 +295,8 @@
 			children = (
 				71DA523320A7034A00BBC917 /* CustomViewProvider.swift */,
 				71DA524320A7138500BBC917 /* Router.swift */,
+				71DA526420A71B9400BBC917 /* BaseClosures.swift */,
+				71DA526820A71E3900BBC917 /* Unimplemented.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -314,6 +328,15 @@
 			);
 			name = CustomTableView;
 			path = ../../../../../../../Presentation/Common/View/CustomTableView;
+			sourceTree = "<group>";
+		};
+		71DA525E20A71A2300BBC917 /* Presentation Model */ = {
+			isa = PBXGroup;
+			children = (
+				71DA525F20A71A4400BBC917 /* PresentationModel.swift */,
+				71DA526620A71D8B00BBC917 /* TablePresentationModel.swift */,
+			);
+			path = "Presentation Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,14 +489,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DA523D20A7054600BBC917 /* BaseViewController.swift in Sources */,
+				71DA526920A71E3900BBC917 /* Unimplemented.swift in Sources */,
 				71DA524F20A7147300BBC917 /* ApplicationController.swift in Sources */,
 				71DA525C20A719C800BBC917 /* CustomTableView.swift in Sources */,
+				71DA526020A71A4400BBC917 /* PresentationModel.swift in Sources */,
 				71DA523720A7039C00BBC917 /* CustomViewController.swift in Sources */,
 				71DA522620A6D85400BBC917 /* AppDelegate.swift in Sources */,
 				71DA524420A7138500BBC917 /* Router.swift in Sources */,
+				71DA526520A71B9400BBC917 /* BaseClosures.swift in Sources */,
 				71DA525120A7147C00BBC917 /* MainRouter.swift in Sources */,
 				71DA523420A7034A00BBC917 /* CustomViewProvider.swift in Sources */,
 				71DA524620A713A400BBC917 /* WindowHelper.swift in Sources */,
+				71DA526220A71B2C00BBC917 /* ZeroViewModel.swift in Sources */,
+				71DA526720A71D8B00BBC917 /* TablePresentationModel.swift in Sources */,
 				71DA524D20A7142E00BBC917 /* TasksViewController.swift in Sources */,
 				71DA522420A6D85400BBC917 /* TodoManager.xcdatamodeld in Sources */,
 				71DA523F20A705FC00BBC917 /* UIView+LoadFromNib.swift in Sources */,
