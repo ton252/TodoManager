@@ -14,7 +14,6 @@
 		71DA522220A6D85400BBC917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71DA521720A6D85400BBC917 /* Assets.xcassets */; };
 		71DA522320A6D85400BBC917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DA521820A6D85400BBC917 /* LaunchScreen.storyboard */; };
 		71DA522420A6D85400BBC917 /* TodoManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71DA521B20A6D85400BBC917 /* TodoManager.xcdatamodeld */; };
-		71DA522520A6D85400BBC917 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71DA521E20A6D85400BBC917 /* Info.plist */; };
 		71DA522620A6D85400BBC917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA521F20A6D85400BBC917 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -259,6 +258,7 @@
 				71DA51CF20A6D75900BBC917 /* Sources */,
 				71DA51D020A6D75900BBC917 /* Frameworks */,
 				71DA51D120A6D75900BBC917 /* Resources */,
+				71DA522720A6ED7800BBC917 /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -353,7 +353,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71DA522520A6D85400BBC917 /* Info.plist in Resources */,
 				71DA522320A6D85400BBC917 /* LaunchScreen.storyboard in Resources */,
 				71DA522220A6D85400BBC917 /* Assets.xcassets in Resources */,
 				71DA522020A6D85400BBC917 /* Main.storyboard in Resources */,
@@ -375,6 +374,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71DA522720A6ED7800BBC917 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = $SRCROOT/swiftlint;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		71DA51CF20A6D75900BBC917 /* Sources */ = {
