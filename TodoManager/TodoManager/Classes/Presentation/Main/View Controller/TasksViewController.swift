@@ -71,7 +71,7 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
     }
     
     @objc private func addNewNoteTap() {
-        print("addNewNoteTap")
+        presentationModel.openNewTaskHandler?()
     }
     
     @objc private func segmentedValueChanged(_ segment: UISegmentedControl) {

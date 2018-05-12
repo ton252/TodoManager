@@ -43,4 +43,27 @@ extension Router {
         
         presenter.show(viewController, sender: .none)
     }
+    
+    /// Modal navigation
+    ///
+    /// - parameter viewController: view controller, which will show
+    func presentModally(viewController: UIViewController) {
+        guard let presenter = presenter else {
+            UIWindow.keyWindowTransit(to: viewController)
+            return
+        }
+        
+        presenter.present(viewController,
+                          animated: true,
+                          completion: .none)
+    }
+    
+    
+    /// Dismiss modal view controller
+    func dismiss(animated: Bool = true) {
+        presenter?.dismiss(
+            animated: animated,
+            completion: nil)
+    }
+    
 }

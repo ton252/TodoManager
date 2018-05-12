@@ -11,6 +11,9 @@ import Foundation
 
 final class TasksListPresentationModel: TablePresentationModel {
     
+    var openTaskHandler: ((TaskViewModel) -> Void)?
+    var openNewTaskHandler: VoidClosure?
+    
     override var possibleCellClasses: [ListCellType] {
         let viewModelTypes: [ViewModel.Type] = [TaskViewModel.self]
         return viewModelTypes.map(cellMapper)
