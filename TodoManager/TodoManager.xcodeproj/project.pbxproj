@@ -29,6 +29,8 @@
 		71DA526520A71B9400BBC917 /* BaseClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526420A71B9400BBC917 /* BaseClosures.swift */; };
 		71DA526720A71D8B00BBC917 /* TablePresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526620A71D8B00BBC917 /* TablePresentationModel.swift */; };
 		71DA526920A71E3900BBC917 /* Unimplemented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526820A71E3900BBC917 /* Unimplemented.swift */; };
+		71DA526B20A725CB00BBC917 /* ContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526A20A725CB00BBC917 /* ContainerCell.swift */; };
+		71DA526D20A7261600BBC917 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA526C20A7261600BBC917 /* LayoutHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		71DA526420A71B9400BBC917 /* BaseClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClosures.swift; sourceTree = "<group>"; };
 		71DA526620A71D8B00BBC917 /* TablePresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePresentationModel.swift; sourceTree = "<group>"; };
 		71DA526820A71E3900BBC917 /* Unimplemented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unimplemented.swift; sourceTree = "<group>"; };
+		71DA526A20A725CB00BBC917 /* ContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCell.swift; sourceTree = "<group>"; };
+		71DA526C20A7261600BBC917 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +320,8 @@
 				71DA524720A7141300BBC917 /* CustomTableView */,
 				71DA523E20A705FC00BBC917 /* UIView+LoadFromNib.swift */,
 				71DA524520A713A300BBC917 /* WindowHelper.swift */,
+				71DA526A20A725CB00BBC917 /* ContainerCell.swift */,
+				71DA526C20A7261600BBC917 /* LayoutHelper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -497,6 +503,7 @@
 				71DA522620A6D85400BBC917 /* AppDelegate.swift in Sources */,
 				71DA524420A7138500BBC917 /* Router.swift in Sources */,
 				71DA526520A71B9400BBC917 /* BaseClosures.swift in Sources */,
+				71DA526D20A7261600BBC917 /* LayoutHelper.swift in Sources */,
 				71DA525120A7147C00BBC917 /* MainRouter.swift in Sources */,
 				71DA523420A7034A00BBC917 /* CustomViewProvider.swift in Sources */,
 				71DA524620A713A400BBC917 /* WindowHelper.swift in Sources */,
@@ -505,6 +512,7 @@
 				71DA524D20A7142E00BBC917 /* TasksViewController.swift in Sources */,
 				71DA522420A6D85400BBC917 /* TodoManager.xcdatamodeld in Sources */,
 				71DA523F20A705FC00BBC917 /* UIView+LoadFromNib.swift in Sources */,
+				71DA526B20A725CB00BBC917 /* ContainerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
