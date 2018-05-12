@@ -19,6 +19,9 @@
 		71DA523F20A705FC00BBC917 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA523E20A705FC00BBC917 /* UIView+LoadFromNib.swift */; };
 		71DA524420A7138500BBC917 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA524320A7138500BBC917 /* Router.swift */; };
 		71DA524620A713A400BBC917 /* WindowHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA524520A713A300BBC917 /* WindowHelper.swift */; };
+		71DA524A20A7141300BBC917 /* CustomTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DA524820A7141300BBC917 /* CustomTableView.xib */; };
+		71DA524B20A7141300BBC917 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA524920A7141300BBC917 /* CustomTableView.swift */; };
+		71DA524D20A7142E00BBC917 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA524C20A7142E00BBC917 /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		71DA523E20A705FC00BBC917 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
 		71DA524320A7138500BBC917 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		71DA524520A713A300BBC917 /* WindowHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowHelper.swift; sourceTree = "<group>"; };
+		71DA524820A7141300BBC917 /* CustomTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableView.xib; sourceTree = "<group>"; };
+		71DA524920A7141300BBC917 /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		71DA524C20A7142E00BBC917 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +218,7 @@
 		71DA521220A6D85400BBC917 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				71DA524C20A7142E00BBC917 /* TasksViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -286,10 +293,21 @@
 		71DA523520A7039000BBC917 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				71DA524720A7141300BBC917 /* CustomTableView */,
 				71DA523E20A705FC00BBC917 /* UIView+LoadFromNib.swift */,
 				71DA524520A713A300BBC917 /* WindowHelper.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		71DA524720A7141300BBC917 /* CustomTableView */ = {
+			isa = PBXGroup;
+			children = (
+				71DA524820A7141300BBC917 /* CustomTableView.xib */,
+				71DA524920A7141300BBC917 /* CustomTableView.swift */,
+			);
+			name = CustomTableView;
+			path = ../../../../../../../Presentation/Common/View/CustomTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DA524A20A7141300BBC917 /* CustomTableView.xib in Resources */,
 				71DA522320A6D85400BBC917 /* LaunchScreen.storyboard in Resources */,
 				71DA522220A6D85400BBC917 /* Assets.xcassets in Resources */,
 			);
@@ -445,7 +464,9 @@
 				71DA522620A6D85400BBC917 /* AppDelegate.swift in Sources */,
 				71DA524420A7138500BBC917 /* Router.swift in Sources */,
 				71DA523420A7034A00BBC917 /* CustomViewProvider.swift in Sources */,
+				71DA524B20A7141300BBC917 /* CustomTableView.swift in Sources */,
 				71DA524620A713A400BBC917 /* WindowHelper.swift in Sources */,
+				71DA524D20A7142E00BBC917 /* TasksViewController.swift in Sources */,
 				71DA522420A6D85400BBC917 /* TodoManager.xcdatamodeld in Sources */,
 				71DA523F20A705FC00BBC917 /* UIView+LoadFromNib.swift in Sources */,
 			);
