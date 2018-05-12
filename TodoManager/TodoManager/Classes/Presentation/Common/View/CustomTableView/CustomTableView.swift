@@ -13,6 +13,8 @@ final class CustomTableView: UIView {
     
     // MARK: - IBOutlets
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var tableView: UITableView! {
+        willSet { newValue.separatorStyle = .none }
+    }
     
 }
