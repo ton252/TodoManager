@@ -28,15 +28,17 @@ final class MainRouter: Router {
     func presentTask(_ task: TaskViewModel) {
         let pm = NewTaskPresentationModel()
         let vc = NewTaskViewController(presentationModel: pm)
+        let nc = UINavigationController(rootViewController: vc)
         
-        presentModally(viewController: vc)
+        presentModally(viewController: nc)
     }
     
     func presentNewTask() {
         let pm = NewTaskPresentationModel()
         let vc = NewTaskViewController(presentationModel: pm)
+        let nc = UINavigationController(rootViewController: vc)
         
-        presentModally(viewController: vc)
+        presentModally(viewController: nc)
     }
     
 }

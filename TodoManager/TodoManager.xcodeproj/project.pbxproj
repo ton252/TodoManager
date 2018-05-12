@@ -41,6 +41,8 @@
 		71DA527D20A73D5200BBC917 /* NewTaskPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA527C20A73D5200BBC917 /* NewTaskPresentationModel.swift */; };
 		71DA527F20A73E0B00BBC917 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA527E20A73E0B00BBC917 /* NewTaskView.swift */; };
 		71DA528120A73E2B00BBC917 /* NewTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DA528020A73E2B00BBC917 /* NewTaskView.xib */; };
+		71DA528320A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA528220A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift */; };
+		71DA52BE20A7529A00BBC917 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA52BD20A7529A00BBC917 /* DatePickerField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		71DA527C20A73D5200BBC917 /* NewTaskPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskPresentationModel.swift; sourceTree = "<group>"; };
 		71DA527E20A73E0B00BBC917 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		71DA528020A73E2B00BBC917 /* NewTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTaskView.xib; sourceTree = "<group>"; };
+		71DA528220A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModallyPresentedNavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		71DA52BD20A7529A00BBC917 /* DatePickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +343,7 @@
 				71DA523620A7039C00BBC917 /* CustomViewController.swift */,
 				71DA523C20A7054600BBC917 /* BaseViewController.swift */,
 				71DA526E20A728B300BBC917 /* MVPMViewController.swift */,
+				71DA528220A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				71DA526A20A725CB00BBC917 /* ContainerCell.swift */,
 				71DA526C20A7261600BBC917 /* LayoutHelper.swift */,
 				71DA527820A7329D00BBC917 /* UITableView+CellHelper.swift */,
+				71DA52BD20A7529A00BBC917 /* DatePickerField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -526,10 +532,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71DA52BE20A7529A00BBC917 /* DatePickerField.swift in Sources */,
 				71DA523D20A7054600BBC917 /* BaseViewController.swift in Sources */,
 				71DA526920A71E3900BBC917 /* Unimplemented.swift in Sources */,
 				71DA527520A72AA600BBC917 /* TaskViewModel.swift in Sources */,
 				71DA527D20A73D5200BBC917 /* NewTaskPresentationModel.swift in Sources */,
+				71DA528320A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift in Sources */,
 				71DA527920A7329D00BBC917 /* UITableView+CellHelper.swift in Sources */,
 				71DA524F20A7147300BBC917 /* ApplicationController.swift in Sources */,
 				71DA525C20A719C800BBC917 /* CustomTableView.swift in Sources */,
