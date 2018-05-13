@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TasksViewController: MVPMViewController<CustomTableView, TasksListPresentationModel> {
+class TasksViewController: MVPMViewController<CustomTableView, TasksListPresentationModel>, UITableViewDelegate {
     
     var segmentControll: UISegmentedControl!
     
@@ -62,6 +62,7 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
     
     private func configureTableView() {
         customView.tableView.backgroundColor = .tdBackground
+        customView.tableView.delegate = self
         customView.tableView.dataSource = presentationModel
         customView.tableView.register(presentationModel.possibleCellClasses)
     }
@@ -93,6 +94,13 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
     
     @objc private func segmentedValueChanged(_ segment: UISegmentedControl) {
         filterTasks()
+    }
+    
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presentationModel.handleSelection(at: indexPath)
     }
     
     

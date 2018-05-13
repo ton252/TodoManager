@@ -68,4 +68,10 @@ final class TasksListPresentationModel: TablePresentationModel {
         return tasks.filter { $0.completed == filter.isCompleted }
     }
     
+    override func process(viewModel: ViewModel) {
+        if let viewModel = viewModel as? TaskViewModel {
+            openTaskHandler?(viewModel)
+        }
+    }
+    
 }
