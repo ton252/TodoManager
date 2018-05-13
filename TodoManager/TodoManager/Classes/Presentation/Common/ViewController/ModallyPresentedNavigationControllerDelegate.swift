@@ -51,8 +51,7 @@ final class ModallyPresentedNavigationControllerDelegate: BackButtonWithoutTitle
     // MARK: - Private Methods
     
     fileprivate func setCloseButtonToViewController(_ viewController: UIViewController) {
-        let closeButton = UIBarButtonItem(image: #imageLiteral(resourceName: "ico20CancelBlue"),
-                                          style: .plain,
+        let closeButton = UIBarButtonItem(barButtonSystemItem: .stop,
                                           target: self,
                                           action: #selector(close))
         
