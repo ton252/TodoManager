@@ -47,12 +47,13 @@ class TextFieldWithButton: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
         
-        addSubview(textField)
-        addSubview(button)
-        
         let disableUserIteractionView = UIView()
         disableUserIteractionView.backgroundColor = .clear
-        textField.addSubview(disableUserIteractionView)
+        
+        addSubview(textField)
+        addSubview(disableUserIteractionView)
+        addSubview(button)
+        
         disableUserIteractionView.fillSuperView()
         
         let textFieldTop = textField.topAnchor.constraint(equalTo: topAnchor)
