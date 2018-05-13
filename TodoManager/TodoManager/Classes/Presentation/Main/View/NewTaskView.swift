@@ -13,6 +13,17 @@ final class NewTaskView: UIView {
     
     // MARK: - IBOutlets
     
+    @IBOutlet var scrollView: UIScrollView! {
+        willSet {
+            backgroundColor = .tdBackground
+        }
+    }
+    @IBOutlet var contentView: UIView! {
+        willSet {
+            newValue.backgroundColor = .clear
+        }
+    }
+    
     @IBOutlet var titleContainerView: UIView!
     @IBOutlet var titleTextField: UITextField! {
         willSet {
@@ -102,7 +113,7 @@ final class NewTaskView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .tdBackground
+        addKeyboardNotification()
     }
     
     
@@ -136,6 +147,47 @@ final class NewTaskView: UIView {
     @objc private func timeChanged(_ timePicker: TimePicker) {
         selectedTime = timePicker.time
         timePickerField.textField.text = timePicker.formattedTime
+    }
+    
+}
+
+
+// MARK: - Keyboard Notifications
+
+private extension NewTaskView {
+    
+    func addKeyboardNotification() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self,
+                                       selector: #selector(adjustForKeyboard),
+                                       name: .UIKeyboardWillHide,
+                                       object: nil)
+        notificationCenter.addObserver(self,
+                                       selector: #selector(adjustForKeyboard),
+                                       name: .UIKeyboardWillChangeFrame,
+                                       object: nil)
+
+    }
+    
+    @objc func adjustForKeyboard(_ notification: NSNotification) {
+        guard let userInfo = notification.userInfo as? [String: Any] else {
+            return
+        }
+        
+        guard let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+            else {
+                return
+        }
+        
+        if notification.name == .UIKeyboardWillHide {
+            scrollView.contentInset.bottom = 0
+            scrollView.scrollIndicatorInsets.bottom = 0
+        } else {
+            let inputAccessoryViewHeight: CGFloat = 44.0
+            let inset = keyboardEndFrame.height - inputAccessoryViewHeight
+            scrollView.contentInset.bottom = inset
+            scrollView.scrollIndicatorInsets.bottom = inset
+        }
     }
     
 }
