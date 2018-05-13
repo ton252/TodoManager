@@ -32,12 +32,12 @@ final class TaskCellView: UIView, ViewModelConfigurable {
             newValue.textColor = .tdText
         }
     }
-    
     @IBOutlet var descriptionLabel: UILabel! {
         willSet {
             newValue.textColor = .tdText
         }
     }
+    @IBOutlet var checkBox: CircleCheckBoxView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,6 +51,7 @@ final class TaskCellView: UIView, ViewModelConfigurable {
         dateLabel.text = viewModel.creationDateFromatted
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.description
+        checkBox.isChecked = viewModel.completed
     }
     
     func clear() {

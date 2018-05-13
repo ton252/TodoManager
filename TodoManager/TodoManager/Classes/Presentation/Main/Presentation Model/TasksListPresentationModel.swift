@@ -11,8 +11,18 @@ import Foundation
 
 final class TasksListPresentationModel: TablePresentationModel {
     
+    enum FilterType: Int {
+        case upcomming = 0
+        case completed = 1
+        
+        var isCompleted: Bool { return self == .completed }
+    }
+    
+    var filter: FilterType = .upcomming
     var openTaskHandler: ((TaskViewModel) -> Void)?
     var openNewTaskHandler: VoidClosure?
+    
+    private var tasks = [TaskViewModel]()
     
     override var possibleCellClasses: [ListCellType] {
         let viewModelTypes: [ViewModel.Type] = [TaskViewModel.self]
@@ -44,8 +54,18 @@ final class TasksListPresentationModel: TablePresentationModel {
 
             tasks.append(task)
         }
-        viewModels = tasks
+        self.tasks = tasks
+        viewModels = filter(tasks: tasks, filter: filter)
         state = .rich
+    }
+    
+    func filterTasks() {
+        viewModels = filter(tasks: tasks, filter: filter)
+        state = .rich
+    }
+    
+    private func filter(tasks: [TaskViewModel], filter: FilterType) -> [TaskViewModel] {
+        return tasks.filter { $0.completed == filter.isCompleted }
     }
     
 }

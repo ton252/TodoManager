@@ -10,6 +10,7 @@ import UIKit
 
 class TasksViewController: MVPMViewController<CustomTableView, TasksListPresentationModel> {
     
+    var segmentControll: UISegmentedControl!
     
     // MARK: - ViewController LifeCycle
     
@@ -27,7 +28,7 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
         presentationModel.updateStateHandler = { [unowned self] state in
             switch state {
             case .rich:
-                self.customView.tableView.reloadData()
+                self.reloadData()
             case .loading:
                 break
             case .zero(_):
@@ -40,6 +41,16 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
     private func loadTasks() {
         presentationModel.loadTasks()
     }
+    
+    private func reloadData() {
+        self.customView.tableView.reloadData()
+    }
+    
+    private func filterTasks() {
+        presentationModel.filter = filterType(for: segmentControll.selectedSegmentIndex)
+        presentationModel.filterTasks()
+    }
+    
     
     // MARK: - Configure UI
     
@@ -56,11 +67,16 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
     }
     
     private func addSegmentControll() {
-        let segment: UISegmentedControl = UISegmentedControl(items: ["Upcoming", "Completed"])
-        segment.sizeToFit()
-        segment.selectedSegmentIndex = 0
-        navigationItem.titleView = segment
-        segment.addTarget(self, action: #selector(segmentedValueChanged(_:)), for: .valueChanged)
+        segmentControll = UISegmentedControl(
+            items: [segmentItemName(for: .upcomming),
+                    segmentItemName(for: .completed)])
+        segmentControll.selectedSegmentIndex = presentationModel.filter.rawValue
+        segmentControll.sizeToFit()
+        navigationItem.titleView = segmentControll
+        segmentControll.addTarget(
+            self,
+            action: #selector(segmentedValueChanged(_:)),
+            for: .valueChanged)
     }
     
     private func addAddBarButtonItem() {
@@ -76,7 +92,27 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
     }
     
     @objc private func segmentedValueChanged(_ segment: UISegmentedControl) {
-        print(segment.selectedSegmentIndex)
+        filterTasks()
+    }
+    
+    
+    // MARK: - Helper Methods
+    
+    private func segmentItemName(for type: TasksListPresentationModel.FilterType) -> String {
+        switch type {
+        case .upcomming:
+            return "Upcomming"
+        case .completed:
+            return "Completed"
+        }
+    }
+    
+    private func filterType(for index: Int) -> TasksListPresentationModel.FilterType {
+        if let type = TasksListPresentationModel.FilterType(rawValue: index) {
+            return type
+        } else {
+            return .upcomming
+        }
     }
     
 }
