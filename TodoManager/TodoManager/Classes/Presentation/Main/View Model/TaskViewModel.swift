@@ -13,12 +13,13 @@ struct TaskViewModel: ViewModel {
 
     var title: String = ""
     var description: String = ""
-    var creationDate: Date
+    var date: Date
     var completed: Bool = false
     
     var creationDateFromatted: String {
-        //TODO: - Append Date Formatter
-        return "24.10.2018"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM HH:mm"
+        return formatter.string(from: date)
     }
     
 }

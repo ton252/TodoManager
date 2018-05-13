@@ -18,6 +18,7 @@ class ContainerCell<T: ViewModelConfigurable>: ListCell where T: UIView {
         
         selectionStyle = .none
         
+        backgroundColor = .clear
         infoView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(infoView)
         infoView.fillSuperView()

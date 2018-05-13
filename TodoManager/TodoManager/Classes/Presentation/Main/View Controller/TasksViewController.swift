@@ -50,6 +50,7 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
     }
     
     private func configureTableView() {
+        customView.tableView.backgroundColor = .tdBackground
         customView.tableView.dataSource = presentationModel
         customView.tableView.register(presentationModel.possibleCellClasses)
     }

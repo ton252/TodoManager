@@ -25,7 +25,7 @@
                 <constraint firstAttribute="trailing" secondItem="oKf-Li-6LT" secondAttribute="trailing" id="CVV-qT-WIP"/>
                 <constraint firstItem="oKf-Li-6LT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="DCT-lo-DeX"/>
                 <constraint firstItem="oKf-Li-6LT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="RRM-f3-rFt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oKf-Li-6LT" secondAttribute="bottom" id="vT3-kJ-eZr"/>
+                <constraint firstAttribute="bottom" secondItem="oKf-Li-6LT" secondAttribute="bottom" id="vT3-kJ-eZr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>

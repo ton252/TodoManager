@@ -12,14 +12,37 @@ final class TaskCellView: UIView, ViewModelConfigurable {
     
     @IBOutlet var contentView: UIView! {
         willSet {
+            newValue.backgroundColor = .tdElement
             newValue.layer.masksToBounds = true
             newValue.layer.cornerRadius = 16
         }
     }
-    @IBOutlet var headerView: UIView!
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var headerView: UIView! {
+        willSet {
+            newValue.backgroundColor = .tdHeader
+        }
+    }
+    @IBOutlet var dateLabel: UILabel! {
+        willSet {
+            newValue.textColor = .tdText
+        }
+    }
+    @IBOutlet var titleLabel: UILabel! {
+        willSet {
+            newValue.textColor = .tdText
+        }
+    }
+    
+    @IBOutlet var descriptionLabel: UILabel! {
+        willSet {
+            newValue.textColor = .tdText
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundColor = .clear
+    }
     
     
     // MARK: - ViewModelConfigurable

@@ -19,24 +19,24 @@
                     <rect key="frame" x="16" y="16" width="343" height="184"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R16-WF-OBc">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="37"/>
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="33"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ox-8r-Ydz">
-                                    <rect key="frame" x="8" y="8" width="82" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="8" y="8" width="69.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-X6-RWg">
-                                    <rect key="frame" x="311" y="6.5" width="24" height="24"/>
-                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vi-X6-RWg" customClass="RoundCheckBoxView" customModule="TodoManager" customModuleProvider="target">
+                                    <rect key="frame" x="311" y="5" width="24" height="24"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="39M-nN-8rC"/>
                                         <constraint firstAttribute="width" constant="24" id="6CO-4j-s85"/>
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" red="0.96474987268447876" green="0.96459847688674927" blue="0.96862930059432983" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstItem="6Ox-8r-Ydz" firstAttribute="top" secondItem="R16-WF-OBc" secondAttribute="top" constant="8" id="BNr-30-9MK"/>
                                 <constraint firstAttribute="bottom" secondItem="6Ox-8r-Ydz" secondAttribute="bottom" constant="8" id="Dew-O6-kYa"/>
@@ -46,14 +46,14 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNr-fz-1xv">
-                            <rect key="frame" x="8" y="53" width="327" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="8" y="49" width="327" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description Description Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WB-V4-bD7">
-                            <rect key="frame" x="8" y="82" width="327" height="61"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="8" y="76.5" width="327" height="57.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>

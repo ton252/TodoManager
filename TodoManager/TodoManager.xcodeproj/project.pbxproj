@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7150958F20A7AE8C00D81659 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150958E20A7AE8C00D81659 /* Colors.swift */; };
+		7150959320A7B1E000D81659 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150959220A7B1E000D81659 /* RoundedView.swift */; };
+		7150959520A7C05400D81659 /* CircleCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150959420A7C05400D81659 /* CircleCheckBoxView.swift */; };
 		71DA51EF20A6D75A00BBC917 /* TodoManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA51EE20A6D75A00BBC917 /* TodoManagerTests.swift */; };
 		71DA51FA20A6D75A00BBC917 /* TodoManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA51F920A6D75A00BBC917 /* TodoManagerUITests.swift */; };
 		71DA522220A6D85400BBC917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71DA521720A6D85400BBC917 /* Assets.xcassets */; };
@@ -42,7 +45,9 @@
 		71DA527F20A73E0B00BBC917 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA527E20A73E0B00BBC917 /* NewTaskView.swift */; };
 		71DA528120A73E2B00BBC917 /* NewTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DA528020A73E2B00BBC917 /* NewTaskView.xib */; };
 		71DA528320A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA528220A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift */; };
-		71DA52BE20A7529A00BBC917 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA52BD20A7529A00BBC917 /* DatePickerField.swift */; };
+		71DA52BE20A7529A00BBC917 /* TextFieldWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA52BD20A7529A00BBC917 /* TextFieldWithButton.swift */; };
+		71E9190D20A8A5CF00982FD2 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9190C20A8A5CF00982FD2 /* TimePicker.swift */; };
+		71E9190F20A8AEB200982FD2 /* UIToolbar+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9190E20A8AEB200982FD2 /* UIToolbar+Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7150958E20A7AE8C00D81659 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7150959220A7B1E000D81659 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		7150959420A7C05400D81659 /* CircleCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCheckBoxView.swift; sourceTree = "<group>"; };
 		71DA51D320A6D75900BBC917 /* TodoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DA51EA20A6D75A00BBC917 /* TodoManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DA51EE20A6D75A00BBC917 /* TodoManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManagerTests.swift; sourceTree = "<group>"; };
@@ -104,7 +112,9 @@
 		71DA527E20A73E0B00BBC917 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		71DA528020A73E2B00BBC917 /* NewTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTaskView.xib; sourceTree = "<group>"; };
 		71DA528220A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModallyPresentedNavigationControllerDelegate.swift; sourceTree = "<group>"; };
-		71DA52BD20A7529A00BBC917 /* DatePickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
+		71DA52BD20A7529A00BBC917 /* TextFieldWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithButton.swift; sourceTree = "<group>"; };
+		71E9190C20A8A5CF00982FD2 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		71E9190E20A8AEB200982FD2 /* UIToolbar+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIToolbar+Keyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +271,7 @@
 				71DA527620A72B3500BBC917 /* TaskCellView.xib */,
 				71DA527E20A73E0B00BBC917 /* NewTaskView.swift */,
 				71DA528020A73E2B00BBC917 /* NewTaskView.xib */,
+				7150959220A7B1E000D81659 /* RoundedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +307,7 @@
 				71DA521720A6D85400BBC917 /* Assets.xcassets */,
 				71DA521820A6D85400BBC917 /* LaunchScreen.storyboard */,
 				71DA521A20A6D85400BBC917 /* Fonts */,
+				7150958E20A7AE8C00D81659 /* Colors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -357,7 +369,10 @@
 				71DA526A20A725CB00BBC917 /* ContainerCell.swift */,
 				71DA526C20A7261600BBC917 /* LayoutHelper.swift */,
 				71DA527820A7329D00BBC917 /* UITableView+CellHelper.swift */,
-				71DA52BD20A7529A00BBC917 /* DatePickerField.swift */,
+				71DA52BD20A7529A00BBC917 /* TextFieldWithButton.swift */,
+				7150959420A7C05400D81659 /* CircleCheckBoxView.swift */,
+				71E9190C20A8A5CF00982FD2 /* TimePicker.swift */,
+				71E9190E20A8AEB200982FD2 /* UIToolbar+Keyboard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -532,7 +547,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71DA52BE20A7529A00BBC917 /* DatePickerField.swift in Sources */,
+				71DA52BE20A7529A00BBC917 /* TextFieldWithButton.swift in Sources */,
+				7150958F20A7AE8C00D81659 /* Colors.swift in Sources */,
 				71DA523D20A7054600BBC917 /* BaseViewController.swift in Sources */,
 				71DA526920A71E3900BBC917 /* Unimplemented.swift in Sources */,
 				71DA527520A72AA600BBC917 /* TaskViewModel.swift in Sources */,
@@ -540,6 +556,7 @@
 				71DA528320A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift in Sources */,
 				71DA527920A7329D00BBC917 /* UITableView+CellHelper.swift in Sources */,
 				71DA524F20A7147300BBC917 /* ApplicationController.swift in Sources */,
+				71E9190D20A8A5CF00982FD2 /* TimePicker.swift in Sources */,
 				71DA525C20A719C800BBC917 /* CustomTableView.swift in Sources */,
 				71DA526020A71A4400BBC917 /* PresentationModel.swift in Sources */,
 				71DA523720A7039C00BBC917 /* CustomViewController.swift in Sources */,
@@ -553,11 +570,14 @@
 				71DA525120A7147C00BBC917 /* MainRouter.swift in Sources */,
 				71DA523420A7034A00BBC917 /* CustomViewProvider.swift in Sources */,
 				71DA524620A713A400BBC917 /* WindowHelper.swift in Sources */,
+				7150959320A7B1E000D81659 /* RoundedView.swift in Sources */,
 				71DA526220A71B2C00BBC917 /* ZeroViewModel.swift in Sources */,
 				71DA527F20A73E0B00BBC917 /* NewTaskView.swift in Sources */,
+				71E9190F20A8AEB200982FD2 /* UIToolbar+Keyboard.swift in Sources */,
 				71DA526720A71D8B00BBC917 /* TablePresentationModel.swift in Sources */,
 				71DA524D20A7142E00BBC917 /* TasksViewController.swift in Sources */,
 				71DA527B20A73D0D00BBC917 /* NewTaskViewController.swift in Sources */,
+				7150959520A7C05400D81659 /* CircleCheckBoxView.swift in Sources */,
 				71DA522420A6D85400BBC917 /* TodoManager.xcdatamodeld in Sources */,
 				71DA523F20A705FC00BBC917 /* UIView+LoadFromNib.swift in Sources */,
 				71DA526B20A725CB00BBC917 /* ContainerCell.swift in Sources */,
