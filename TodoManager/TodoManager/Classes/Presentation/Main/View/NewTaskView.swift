@@ -10,6 +10,15 @@ import UIKit
 
 final class NewTaskView: UIView {
     
+    private enum Constants {
+        static let titlePlaceholder = "Enter task name"
+        static let datePlacholder = "Select task date"
+        static let timePlaceholder = "Select task reminder time"
+        static let completedTitle = "Completed"
+        static let changeButtonTitle = "Change"
+        static let saveButtonTitle = "Save"
+    }
+    
     
     // MARK: - IBOutlets
     
@@ -27,6 +36,7 @@ final class NewTaskView: UIView {
     @IBOutlet var titleContainerView: UIView!
     @IBOutlet var titleTextField: UITextField! {
         willSet {
+            newValue.placeholder = Constants.titlePlaceholder
             newValue.backgroundColor = .clear
             newValue.inputAccessoryView = doneToolBar
         }
@@ -35,7 +45,9 @@ final class NewTaskView: UIView {
     @IBOutlet var datePickerContainerView: UIView!
     @IBOutlet var datePickerField: TextFieldWithButton! {
         willSet {
-            let datePicker = UIDatePicker()
+            newValue.textField.placeholder = Constants.datePlacholder
+            newValue.button.setTitle(Constants.changeButtonTitle, for: .normal)
+            
             datePicker.datePickerMode = .dateAndTime
             datePicker.minimumDate = Date()
             datePicker.addTarget(self, action: #selector(dateChanged(_:)), for: .valueChanged)
@@ -53,8 +65,9 @@ final class NewTaskView: UIView {
     @IBOutlet var timePickerContainerView: UIView!
     @IBOutlet var timePickerField: TextFieldWithButton! {
         willSet {
-            let timePicker = TimePicker()
-            timePicker.timeList = [5.0 * 60.0, 10.0 * 60.0, 15.0 * 60.0]
+            newValue.textField.placeholder = Constants.timePlaceholder
+            newValue.button.setTitle(Constants.changeButtonTitle, for: .normal)
+            
             timePicker.timeChangedHandler = timeChanged(_:)
             newValue.inputView = timePicker
             
@@ -68,12 +81,17 @@ final class NewTaskView: UIView {
     }
     
     @IBOutlet var isComletedContainerView: UIView!
-    @IBOutlet var isComletedLabel: UILabel!
     @IBOutlet var isCompletedSwitcher: UISwitch!
+    @IBOutlet var isComletedLabel: UILabel! {
+        willSet {
+            newValue.text = Constants.completedTitle
+        }
+    }
     
     @IBOutlet var textContainerView: UIView!
     @IBOutlet var textView: UITextView! {
         willSet {
+            newValue.text = nil
             newValue.backgroundColor = .clear
             newValue.inputAccessoryView = doneToolBar
         }
@@ -86,6 +104,8 @@ final class NewTaskView: UIView {
     }
     @IBOutlet var saveButton: UIButton! {
         willSet {
+            newValue.setTitle(Constants.saveButtonTitle, for: .normal)
+            
             newValue.layer.masksToBounds = true
             newValue.layer.cornerRadius = 8
             newValue.backgroundColor = .tdTint
@@ -107,6 +127,9 @@ final class NewTaskView: UIView {
             target: self,
             action: #selector(doneButtonPressed))
     }
+    
+    private let timePicker = TimePicker()
+    private let datePicker = UIDatePicker()
     
     
     // MARK: - Public Methods
@@ -147,6 +170,35 @@ final class NewTaskView: UIView {
     @objc private func timeChanged(_ timePicker: TimePicker) {
         selectedTime = timePicker.time
         timePickerField.textField.text = timePicker.formattedTime
+    }
+    
+}
+
+
+// MARK: ViewModelConfigurable
+
+extension NewTaskView: ViewModelConfigurable {
+    
+    func configure(for viewModel: TaskViewModel) {
+        titleTextField.text = viewModel.title
+        isCompletedSwitcher.isOn = viewModel.completed
+        textView.text = viewModel.description
+        
+        if let date = viewModel.date {
+            datePicker.date = date
+            dateChanged(datePicker)
+        } else {
+            datePickerField.textField.text = nil
+        }
+        
+        if let time = viewModel.reminderTime {
+            timePicker.time = time
+            timeChanged(timePicker)
+        } else {
+            timePickerField.textField.text = nil
+        }
+        
+        timePicker.timeList = viewModel.availableReminderTimes
     }
     
 }

@@ -22,6 +22,7 @@ class NewTaskViewController: MVPMViewController<NewTaskView, NewTaskPresentation
     // MARK: - Configure UI
     
     private func configureUI() {
+        customView.configure(for: presentationModel.task)
         addCloseButton()
         addRemoveBarButtonItem()
     }

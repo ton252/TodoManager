@@ -13,8 +13,7 @@ class BackButtonWithoutTitleNavigationControllerDelegate: NSObject, UINavigation
     
     open func navigationController(_ navigationController: UINavigationController,
                                    willShow viewController: UIViewController,
-                                   animated: Bool)
-    {
+                                   animated: Bool) {
         let backButton = UIBarButtonItem(title: "",
                                          style: UIBarButtonItemStyle.plain,
                                          target: nil,
@@ -27,6 +26,7 @@ class BackButtonWithoutTitleNavigationControllerDelegate: NSObject, UINavigation
 
 
 final class ModallyPresentedNavigationControllerDelegate: BackButtonWithoutTitleNavigationControllerDelegate {
+    
     // MARK: - Public Properties
     
     weak var modalNavigationController: UINavigationController?

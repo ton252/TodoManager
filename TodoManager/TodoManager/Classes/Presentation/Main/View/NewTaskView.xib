@@ -32,7 +32,7 @@
                                             <rect key="frame" x="8" y="14.5" width="327" height="21"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,7 +146,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1b-0e-5Xu">
                             <rect key="frame" x="0.0" y="8" width="343" height="48"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                             <state key="normal" title="Save">
                                 <color key="titleColor" red="0.96474987270000001" green="0.9645984769" blue="0.96862930059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>

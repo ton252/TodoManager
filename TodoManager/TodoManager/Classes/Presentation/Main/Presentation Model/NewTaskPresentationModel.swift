@@ -11,4 +11,18 @@ import Foundation
 
 final class NewTaskPresentationModel: PresentationModel {
     
+    var task: TaskViewModel
+    
+    private static var newTask: TaskViewModel {
+        return TaskViewModel(
+            title: "",
+            description: "No description",
+            completed: false)
+    }
+    
+    init(task: TaskViewModel? = nil, errorHandler: ErrorHandler? = nil) {
+        self.task = task ?? NewTaskPresentationModel.newTask
+        super.init(errorHandler: errorHandler)
+    }
+    
 }

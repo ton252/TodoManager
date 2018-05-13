@@ -39,8 +39,8 @@ final class TasksListPresentationModel: TablePresentationModel {
             let task = TaskViewModel(
                 title: title,
                 description: description,
-                date: Date(),
-                completed: (i % 2 == 0))
+                completed: (i % 2 == 0),
+                date: Date())
 
             tasks.append(task)
         }

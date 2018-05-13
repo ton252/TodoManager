@@ -271,7 +271,6 @@
 				71DA527620A72B3500BBC917 /* TaskCellView.xib */,
 				71DA527E20A73E0B00BBC917 /* NewTaskView.swift */,
 				71DA528020A73E2B00BBC917 /* NewTaskView.xib */,
-				7150959220A7B1E000D81659 /* RoundedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,6 +372,7 @@
 				7150959420A7C05400D81659 /* CircleCheckBoxView.swift */,
 				71E9190C20A8A5CF00982FD2 /* TimePicker.swift */,
 				71E9190E20A8AEB200982FD2 /* UIToolbar+Keyboard.swift */,
+				7150959220A7B1E000D81659 /* RoundedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

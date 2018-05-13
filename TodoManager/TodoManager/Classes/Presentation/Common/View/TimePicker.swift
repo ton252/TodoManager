@@ -20,7 +20,7 @@ class TimePicker: UIPickerView {
         }
     }
     
-    private(set) var time: TimeInterval = 0 {
+    var time: TimeInterval = 0 {
         didSet { formattedTime = formatTime(time) }
     }
     private(set) var formattedTime: String = ""

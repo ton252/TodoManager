@@ -26,7 +26,7 @@ final class MainRouter: Router {
     }
     
     func presentTask(_ task: TaskViewModel) {
-        let pm = NewTaskPresentationModel()
+        let pm = NewTaskPresentationModel(task: task)
         let vc = NewTaskViewController(presentationModel: pm)
         let nc = UINavigationController(rootViewController: vc)
         
