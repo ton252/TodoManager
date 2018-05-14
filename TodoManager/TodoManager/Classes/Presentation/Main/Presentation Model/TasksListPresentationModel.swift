@@ -47,6 +47,7 @@ final class TasksListPresentationModel: TablePresentationModel {
         tasks = tasksService
             .obtainAllTasks()
             .compactMap { TaskViewModel(task: $0) }
+            .reversed()
         viewModels = filter(tasks: tasks, filter: filter)
         state = .rich
     }

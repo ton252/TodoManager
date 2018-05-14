@@ -15,4 +15,3 @@ protocol StorageService {
     func setupDAO<Model, CDModel>(translator: CoreDataTranslator<Model, CDModel>) throws -> CoreDataDAO<Model, CDModel>
     
 }
-

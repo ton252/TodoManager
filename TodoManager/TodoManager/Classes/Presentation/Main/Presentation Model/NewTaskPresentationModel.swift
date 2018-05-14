@@ -14,6 +14,7 @@ final class NewTaskPresentationModel: PresentationModel {
     var task: TaskViewModel
     
     private let tasksService = ServiceLayer.instance.tasksService
+    private let pushService = ServiceLayer.instance.pushService
     
     init(task: TaskViewModel? = nil, errorHandler: ErrorHandler? = nil) {
         self.task = task ?? NewTaskPresentationModel.createNewTask()
@@ -21,22 +22,16 @@ final class NewTaskPresentationModel: PresentationModel {
     }
     
     func saveTask() {
-        let entityId = task.entityId
-        let title = task.title.nilIfEmpty ?? "No Title"
-        let description = task.description.nilIfEmpty ?? "No description"
-        let reminderTime = task.reminderTime
-        let date = task.date
-        let completed = task.completed
-
-        let taskModel =
-            Task(entityId: entityId,
-                 title: title,
-                 taskDescription: description,
-                 date: date,
-                 reminderTime: reminderTime,
-                 completed: completed)
-
-        tasksService.persistTask(taskModel)
+        tasksService.persistTask(Task(viewModel: task))
+    }
+    
+    func addPushNotification() {
+        guard !task.completed else { return }
+        pushService.addPushNotification(for: Task(viewModel: task))
+    }
+    
+    func removePushNotification() {
+        pushService.removeNotification(for: Task(viewModel: task))
     }
     
     func eraseTask() {

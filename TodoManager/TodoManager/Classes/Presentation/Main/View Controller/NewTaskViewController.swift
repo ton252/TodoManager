@@ -26,6 +26,7 @@ class NewTaskViewController: MVPMViewController<NewTaskView, NewTaskPresentation
         customView.saveButtonHandler = { [unowned self] task in
             self.presentationModel.task = task
             self.presentationModel.saveTask()
+            self.presentationModel.addPushNotification()
             self.dismiss(animated: true)
         }
     }
@@ -56,8 +57,8 @@ class NewTaskViewController: MVPMViewController<NewTaskView, NewTaskPresentation
     
     @objc private func removeNoteTap() {
         presentationModel.eraseTask()
+        presentationModel.removePushNotification()
         dismiss(animated: true)
-        
     }
     
 }

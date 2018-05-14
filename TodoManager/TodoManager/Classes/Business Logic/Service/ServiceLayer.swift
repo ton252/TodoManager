@@ -15,9 +15,11 @@ class ServiceLayer {
     static let instance = ServiceLayer()
     
     let tasksService: TasksService
+    let pushService: PushNotificationService
     
     init() {
         tasksService = TasksServiceImpl(storageService: StorageServiceImpl())
+        pushService = PushNotificationServiceImpl()
     }
     
 }

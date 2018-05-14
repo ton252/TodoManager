@@ -64,6 +64,8 @@
 		71E9194B20A9AF7800982FD2 /* TasksServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9194A20A9AF7800982FD2 /* TasksServiceTest.swift */; };
 		71E9194D20A9B84F00982FD2 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9194C20A9B84F00982FD2 /* StorageService.swift */; };
 		71E9194F20A9B9B300982FD2 /* StorageServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9194E20A9B9B300982FD2 /* StorageServiceImpl.swift */; };
+		71E9195120A9D6EA00982FD2 /* PushNotificationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9195020A9D6EA00982FD2 /* PushNotificationServiceImpl.swift */; };
+		71E9195320A9DE2300982FD2 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9195220A9DE2300982FD2 /* PushNotificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +149,8 @@
 		71E9194A20A9AF7800982FD2 /* TasksServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksServiceTest.swift; sourceTree = "<group>"; };
 		71E9194C20A9B84F00982FD2 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		71E9194E20A9B9B300982FD2 /* StorageServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceImpl.swift; sourceTree = "<group>"; };
+		71E9195020A9D6EA00982FD2 /* PushNotificationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationServiceImpl.swift; sourceTree = "<group>"; };
+		71E9195220A9DE2300982FD2 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 				71E9194320A982E400982FD2 /* Protocols */,
 				71E9193020A9600F00982FD2 /* TasksServiceImpl.swift */,
 				71E9194E20A9B9B300982FD2 /* StorageServiceImpl.swift */,
+				71E9195020A9D6EA00982FD2 /* PushNotificationServiceImpl.swift */,
 				71E9194120A9826B00982FD2 /* ServiceLayer.swift */,
 			);
 			path = Service;
@@ -528,6 +533,7 @@
 			children = (
 				71E9194420A9830000982FD2 /* TasksService.swift */,
 				71E9194C20A9B84F00982FD2 /* StorageService.swift */,
+				71E9195220A9DE2300982FD2 /* PushNotificationService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -692,6 +698,7 @@
 				71E9193120A9600F00982FD2 /* TasksServiceImpl.swift in Sources */,
 				71DA526920A71E3900BBC917 /* Unimplemented.swift in Sources */,
 				71DA527520A72AA600BBC917 /* TaskViewModel.swift in Sources */,
+				71E9195320A9DE2300982FD2 /* PushNotificationService.swift in Sources */,
 				71DA527D20A73D5200BBC917 /* NewTaskPresentationModel.swift in Sources */,
 				71E9192820A95B4800982FD2 /* CoreDataConfiguration.swift in Sources */,
 				71E9192A20A95B4800982FD2 /* CoreDataTranslator.swift in Sources */,
@@ -719,6 +726,7 @@
 				71DA523420A7034A00BBC917 /* CustomViewProvider.swift in Sources */,
 				71DA524620A713A400BBC917 /* WindowHelper.swift in Sources */,
 				7150959320A7B1E000D81659 /* RoundedView.swift in Sources */,
+				71E9195120A9D6EA00982FD2 /* PushNotificationServiceImpl.swift in Sources */,
 				71DA526220A71B2C00BBC917 /* ZeroViewModel.swift in Sources */,
 				71DA527F20A73E0B00BBC917 /* NewTaskView.swift in Sources */,
 				71E9190F20A8AEB200982FD2 /* UIToolbar+Keyboard.swift in Sources */,

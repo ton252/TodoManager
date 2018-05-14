@@ -63,3 +63,17 @@ extension TaskViewModel {
     }
     
 }
+
+extension Task {
+    
+    convenience init(viewModel: TaskViewModel) {
+        self.init(
+            entityId: viewModel.entityId,
+            title: viewModel.title.nilIfEmpty ?? "No Title",
+            taskDescription: viewModel.description.nilIfEmpty ?? "No description",
+            date: viewModel.date,
+            reminderTime: viewModel.reminderTime,
+            completed: viewModel.completed)
+    }
+    
+}
