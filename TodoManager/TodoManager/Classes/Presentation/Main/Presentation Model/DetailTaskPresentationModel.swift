@@ -9,7 +9,7 @@
 import Foundation
 
 
-final class NewTaskPresentationModel: PresentationModel {
+final class DetailTaskPresentationModel: PresentationModel {
     
     // MARK: - Public Properties
     
@@ -25,7 +25,7 @@ final class NewTaskPresentationModel: PresentationModel {
     // MARK: - Initializers
     
     init(task: TaskViewModel? = nil, errorHandler: ErrorHandler? = nil) {
-        self.task = task ?? NewTaskPresentationModel.createNewTask()
+        self.task = task ?? DetailTaskPresentationModel.createNewTask()
         super.init(errorHandler: errorHandler)
     }
     

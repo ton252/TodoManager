@@ -1,5 +1,5 @@
 //
-//  NewTaskView.swift
+//  DetailTaskView.swift
 //  TodoManager
 //
 //  Created by Anton Polyakov on 12/05/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class NewTaskView: UIView {
+final class DetailTaskView: UIView {
     
     private enum Constants {
         static let titlePlaceholder = "Enter task name"
@@ -196,7 +196,7 @@ final class NewTaskView: UIView {
     }
 }
 
-extension NewTaskView: UITextViewDelegate {
+extension DetailTaskView: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         viewModel.description = textView.text
@@ -207,7 +207,7 @@ extension NewTaskView: UITextViewDelegate {
 
 // MARK: ViewModelConfigurable
 
-extension NewTaskView: ViewModelConfigurable {
+extension DetailTaskView: ViewModelConfigurable {
     
     func configure(for viewModel: TaskViewModel) {
         self.viewModel = viewModel
@@ -234,7 +234,7 @@ extension NewTaskView: ViewModelConfigurable {
 
 // MARK: - Keyboard Notifications
 
-private extension NewTaskView {
+private extension DetailTaskView {
     
     func addKeyboardNotification() {
         let notificationCenter = NotificationCenter.default
