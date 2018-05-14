@@ -48,6 +48,11 @@
 		71DA52BE20A7529A00BBC917 /* TextFieldWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA52BD20A7529A00BBC917 /* TextFieldWithButton.swift */; };
 		71E9190D20A8A5CF00982FD2 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9190C20A8A5CF00982FD2 /* TimePicker.swift */; };
 		71E9190F20A8AEB200982FD2 /* UIToolbar+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9190E20A8AEB200982FD2 /* UIToolbar+Keyboard.swift */; };
+		71E9192620A95B4800982FD2 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9191320A95B4800982FD2 /* Entity.swift */; };
+		71E9192720A95B4800982FD2 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9191420A95B4800982FD2 /* DAO.swift */; };
+		71E9192820A95B4800982FD2 /* CoreDataConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9191720A95B4800982FD2 /* CoreDataConfiguration.swift */; };
+		71E9192920A95B4800982FD2 /* CoreDataDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9191920A95B4800982FD2 /* CoreDataDAO.swift */; };
+		71E9192A20A95B4800982FD2 /* CoreDataTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9191B20A95B4800982FD2 /* CoreDataTranslator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +120,11 @@
 		71DA52BD20A7529A00BBC917 /* TextFieldWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithButton.swift; sourceTree = "<group>"; };
 		71E9190C20A8A5CF00982FD2 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		71E9190E20A8AEB200982FD2 /* UIToolbar+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIToolbar+Keyboard.swift"; sourceTree = "<group>"; };
+		71E9191320A95B4800982FD2 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		71E9191420A95B4800982FD2 /* DAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
+		71E9191720A95B4800982FD2 /* CoreDataConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConfiguration.swift; sourceTree = "<group>"; };
+		71E9191920A95B4800982FD2 /* CoreDataDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDAO.swift; sourceTree = "<group>"; };
+		71E9191B20A95B4800982FD2 /* CoreDataTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTranslator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +224,7 @@
 		71DA520A20A6D85400BBC917 /* Business Logic */ = {
 			isa = PBXGroup;
 			children = (
+				71E9191020A95B0300982FD2 /* Helper */,
 				71DA520B20A6D85400BBC917 /* Service */,
 			);
 			path = "Business Logic";
@@ -396,6 +407,66 @@
 			path = "Presentation Model";
 			sourceTree = "<group>";
 		};
+		71E9191020A95B0300982FD2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				71E9191120A95B1600982FD2 /* DAO */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		71E9191120A95B1600982FD2 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				71E9191220A95B4800982FD2 /* Core */,
+				71E9191520A95B4800982FD2 /* CoreDataDAO */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		71E9191220A95B4800982FD2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				71E9191320A95B4800982FD2 /* Entity.swift */,
+				71E9191420A95B4800982FD2 /* DAO.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		71E9191520A95B4800982FD2 /* CoreDataDAO */ = {
+			isa = PBXGroup;
+			children = (
+				71E9191620A95B4800982FD2 /* Configuration */,
+				71E9191820A95B4800982FD2 /* DAO */,
+				71E9191A20A95B4800982FD2 /* Translator */,
+			);
+			path = CoreDataDAO;
+			sourceTree = "<group>";
+		};
+		71E9191620A95B4800982FD2 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				71E9191720A95B4800982FD2 /* CoreDataConfiguration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		71E9191820A95B4800982FD2 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				71E9191920A95B4800982FD2 /* CoreDataDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		71E9191A20A95B4800982FD2 /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				71E9191B20A95B4800982FD2 /* CoreDataTranslator.swift */,
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -548,21 +619,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DA52BE20A7529A00BBC917 /* TextFieldWithButton.swift in Sources */,
+				71E9192920A95B4800982FD2 /* CoreDataDAO.swift in Sources */,
 				7150958F20A7AE8C00D81659 /* Colors.swift in Sources */,
 				71DA523D20A7054600BBC917 /* BaseViewController.swift in Sources */,
 				71DA526920A71E3900BBC917 /* Unimplemented.swift in Sources */,
 				71DA527520A72AA600BBC917 /* TaskViewModel.swift in Sources */,
 				71DA527D20A73D5200BBC917 /* NewTaskPresentationModel.swift in Sources */,
+				71E9192820A95B4800982FD2 /* CoreDataConfiguration.swift in Sources */,
+				71E9192A20A95B4800982FD2 /* CoreDataTranslator.swift in Sources */,
 				71DA528320A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift in Sources */,
 				71DA527920A7329D00BBC917 /* UITableView+CellHelper.swift in Sources */,
 				71DA524F20A7147300BBC917 /* ApplicationController.swift in Sources */,
 				71E9190D20A8A5CF00982FD2 /* TimePicker.swift in Sources */,
 				71DA525C20A719C800BBC917 /* CustomTableView.swift in Sources */,
 				71DA526020A71A4400BBC917 /* PresentationModel.swift in Sources */,
+				71E9192720A95B4800982FD2 /* DAO.swift in Sources */,
 				71DA523720A7039C00BBC917 /* CustomViewController.swift in Sources */,
 				71DA522620A6D85400BBC917 /* AppDelegate.swift in Sources */,
 				71DA524420A7138500BBC917 /* Router.swift in Sources */,
 				71DA526520A71B9400BBC917 /* BaseClosures.swift in Sources */,
+				71E9192620A95B4800982FD2 /* Entity.swift in Sources */,
 				71DA526D20A7261600BBC917 /* LayoutHelper.swift in Sources */,
 				71DA526F20A728B300BBC917 /* MVPMViewController.swift in Sources */,
 				71DA527320A72A6C00BBC917 /* TaskCellView.swift in Sources */,
