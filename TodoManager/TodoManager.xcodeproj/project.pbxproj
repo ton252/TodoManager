@@ -61,6 +61,9 @@
 		71E9194220A9826B00982FD2 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9194120A9826B00982FD2 /* ServiceLayer.swift */; };
 		71E9194520A9830000982FD2 /* TasksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9194420A9830000982FD2 /* TasksService.swift */; };
 		71E9194920A9923200982FD2 /* Nil+EmptyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9194820A9923200982FD2 /* Nil+EmptyString.swift */; };
+		71E9194B20A9AF7800982FD2 /* TasksServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9194A20A9AF7800982FD2 /* TasksServiceTest.swift */; };
+		71E9194D20A9B84F00982FD2 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9194C20A9B84F00982FD2 /* StorageService.swift */; };
+		71E9194F20A9B9B300982FD2 /* StorageServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9194E20A9B9B300982FD2 /* StorageServiceImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +144,9 @@
 		71E9194120A9826B00982FD2 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		71E9194420A9830000982FD2 /* TasksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksService.swift; sourceTree = "<group>"; };
 		71E9194820A9923200982FD2 /* Nil+EmptyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nil+EmptyString.swift"; sourceTree = "<group>"; };
+		71E9194A20A9AF7800982FD2 /* TasksServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksServiceTest.swift; sourceTree = "<group>"; };
+		71E9194C20A9B84F00982FD2 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		71E9194E20A9B9B300982FD2 /* StorageServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +197,7 @@
 		71DA51ED20A6D75A00BBC917 /* TodoManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				71E9194A20A9AF7800982FD2 /* TasksServiceTest.swift */,
 				71DA51EE20A6D75A00BBC917 /* TodoManagerTests.swift */,
 				71DA51F020A6D75A00BBC917 /* Info.plist */,
 			);
@@ -252,6 +259,7 @@
 			children = (
 				71E9194320A982E400982FD2 /* Protocols */,
 				71E9193020A9600F00982FD2 /* TasksServiceImpl.swift */,
+				71E9194E20A9B9B300982FD2 /* StorageServiceImpl.swift */,
 				71E9194120A9826B00982FD2 /* ServiceLayer.swift */,
 			);
 			path = Service;
@@ -519,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				71E9194420A9830000982FD2 /* TasksService.swift */,
+				71E9194C20A9B84F00982FD2 /* StorageService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -678,6 +687,7 @@
 				71E9194020A96D4C00982FD2 /* CDTaskTranslator.swift in Sources */,
 				71E9192920A95B4800982FD2 /* CoreDataDAO.swift in Sources */,
 				7150958F20A7AE8C00D81659 /* Colors.swift in Sources */,
+				71E9194D20A9B84F00982FD2 /* StorageService.swift in Sources */,
 				71DA523D20A7054600BBC917 /* BaseViewController.swift in Sources */,
 				71E9193120A9600F00982FD2 /* TasksServiceImpl.swift in Sources */,
 				71DA526920A71E3900BBC917 /* Unimplemented.swift in Sources */,
@@ -712,6 +722,7 @@
 				71DA526220A71B2C00BBC917 /* ZeroViewModel.swift in Sources */,
 				71DA527F20A73E0B00BBC917 /* NewTaskView.swift in Sources */,
 				71E9190F20A8AEB200982FD2 /* UIToolbar+Keyboard.swift in Sources */,
+				71E9194F20A9B9B300982FD2 /* StorageServiceImpl.swift in Sources */,
 				71DA526720A71D8B00BBC917 /* TablePresentationModel.swift in Sources */,
 				71DA524D20A7142E00BBC917 /* TasksViewController.swift in Sources */,
 				71DA527B20A73D0D00BBC917 /* NewTaskViewController.swift in Sources */,
@@ -728,6 +739,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E9194B20A9AF7800982FD2 /* TasksServiceTest.swift in Sources */,
 				71DA51EF20A6D75A00BBC917 /* TodoManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

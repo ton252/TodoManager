@@ -55,7 +55,9 @@ class NewTaskViewController: MVPMViewController<NewTaskView, NewTaskPresentation
     }
     
     @objc private func removeNoteTap() {
-        print("removeNoteTap")
+        presentationModel.eraseTask()
+        dismiss(animated: true)
+        
     }
     
 }

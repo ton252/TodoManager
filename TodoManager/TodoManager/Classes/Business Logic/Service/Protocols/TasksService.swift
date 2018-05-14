@@ -13,5 +13,6 @@ protocol TasksService {
     
     func obtainAllTasks() -> [Task]
     func persistTask(_ task: Task)
+    func eraseTask(by taskId: String)
     
 }

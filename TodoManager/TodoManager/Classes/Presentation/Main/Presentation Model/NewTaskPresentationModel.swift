@@ -39,6 +39,10 @@ final class NewTaskPresentationModel: PresentationModel {
         tasksService.persistTask(taskModel)
     }
     
+    func eraseTask() {
+        tasksService.eraseTask(by: task.entityId)
+    }
+    
     private static func createNewTask() -> TaskViewModel {
         return TaskViewModel(
             entityId: UUID().uuidString,

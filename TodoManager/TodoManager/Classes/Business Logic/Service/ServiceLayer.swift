@@ -17,7 +17,7 @@ class ServiceLayer {
     let tasksService: TasksService
     
     init() {
-        tasksService = TasksServiceImpl()
+        tasksService = TasksServiceImpl(storageService: StorageServiceImpl())
     }
     
 }

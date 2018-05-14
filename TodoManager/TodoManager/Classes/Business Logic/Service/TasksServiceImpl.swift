@@ -10,21 +10,32 @@ import Foundation
 
 final class TasksServiceImpl: TasksService {
     
-    private let config = CoreDataConfiguration(containerName: "TodoManager")
+    private let storageService: StorageService
     
+    
+    init(storageService: StorageService) {
+        self.storageService = storageService
+    }
 
     func obtainAllTasks() -> [Task] {
-        guard let dao = try? CoreDataDAO(CDTaskTranslator(), configuration: config) else {
+        guard let dao = try? storageService.setupDAO(translator: CDTaskTranslator()) else {
             return []
         }
         return dao.read()
     }
     
     func persistTask(_ task: Task) {
-        guard let dao = try? CoreDataDAO(CDTaskTranslator(), configuration: config) else {
+        guard let dao = try? storageService.setupDAO(translator: CDTaskTranslator()) else {
             return
         }
         try? dao.persist(task)
+    }
+    
+    func eraseTask(by taskId: String) {
+        guard let dao = try? storageService.setupDAO(translator: CDTaskTranslator()) else {
+            return
+        }
+        try? dao.erase(taskId)
     }
     
 }
