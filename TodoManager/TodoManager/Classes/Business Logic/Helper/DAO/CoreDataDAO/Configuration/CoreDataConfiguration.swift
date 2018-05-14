@@ -27,7 +27,7 @@ struct CoreDataConfiguration {
     let options: [String: NSObject]
     
     /// URL of persistent store file
-    let persistentStoreURL:URL?
+    let persistentStoreURL: URL?
     
     
     /// Create an instance with specified `containerName`, `storeType`, `options`.
@@ -37,13 +37,12 @@ struct CoreDataConfiguration {
     ///   - storeType: store type. See above.
     ///   - options: persistence store options.
     ///   - persistentStoreURL: URL of persistent store file.
-    init(
-        containerName: String,
-        storeType: String = NSSQLiteStoreType,
-        options: [String : NSObject] =
-            [NSMigratePersistentStoresAutomaticallyOption: true as NSObject,
-             NSInferMappingModelAutomaticallyOption: true as NSObject],
-        persistentStoreURL:URL? = nil) {
+    init(containerName: String,
+         storeType: String = NSSQLiteStoreType,
+         options: [String: NSObject] =
+        [NSMigratePersistentStoresAutomaticallyOption: true as NSObject,
+         NSInferMappingModelAutomaticallyOption: true as NSObject],
+         persistentStoreURL: URL? = nil) {
         
         self.containerName = containerName
         self.storeType = storeType

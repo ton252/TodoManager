@@ -37,7 +37,7 @@ class CoreDataDAO<CDModel: NSManagedObject, Model: Entity> : DAO<Model> {
     }
     
     
-    //MARK: - Public
+    // MARK: - Public
     
     /// Creates an instance with specified `translator` and `configuration`.
     ///
@@ -55,13 +55,13 @@ class CoreDataDAO<CDModel: NSManagedObject, Model: Entity> : DAO<Model> {
                 configuration.options
                     .forEach {
                         description.setOption($0.value, forKey: $0.key)
-                }
+                    }
                 description.type = configuration.storeType
                 
                 if configuration.persistentStoreURL != nil {
                     description.url = configuration.persistentStoreURL
                 }
-        }
+            }
         
         var error: Error?
         
@@ -101,7 +101,7 @@ class CoreDataDAO<CDModel: NSManagedObject, Model: Entity> : DAO<Model> {
     }
     
     
-    //MARK: - DAO
+    // MARK: - DAO
     
     override func persist(_ entity: Model) throws {
         var error: Error?
@@ -134,7 +134,7 @@ class CoreDataDAO<CDModel: NSManagedObject, Model: Entity> : DAO<Model> {
         context.performAndWait { [weak self] in
             guard let `self` = self else { return }
             
-            entities.forEach{ entity in
+            entities.forEach { entity in
                 if self.isEntryExist(entity.entityId, inContext: context) {
                     let existingEntries = self.fetchEntries(entity.entityId, inContext: context)
                     existingEntries.forEach {
@@ -258,7 +258,7 @@ class CoreDataDAO<CDModel: NSManagedObject, Model: Entity> : DAO<Model> {
     }
     
     
-    //MARK: - Private
+    // MARK: - Private
     
     private func fetchEntries(
             _ entryId: String,
@@ -301,7 +301,7 @@ class CoreDataDAO<CDModel: NSManagedObject, Model: Entity> : DAO<Model> {
     }
     
     
-    //MARK: - Transactions
+    // MARK: - Transactions
     
     private func isEntryExist(
             _ entryId: String,

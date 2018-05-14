@@ -79,8 +79,9 @@ class DAO<Model: Entity> {
     ///   - field: ordering field.
     ///   - ascending: ascending flag (descending otherwise).
     /// - Returns: filtered and ordered array of entities.
-    func read(predicatedBy predicate: NSPredicate?, orderedBy field: String?,
-                   ascending: Bool) -> [Model] {
+    func read(predicatedBy predicate: NSPredicate?,
+              orderedBy field: String?,
+              ascending: Bool) -> [Model] {
         preconditionFailure()
     }
     

@@ -15,9 +15,7 @@ class Entity: Hashable {
     
     /// Hash value for compare entities.
     var hashValue: Int {
-        get {
-            return self.entityId.hashValue
-        }
+        return self.entityId.hashValue
     }
     
     
@@ -52,6 +50,6 @@ class Entity: Hashable {
 ///   - lhs: left entity to compare.
 ///   - rhs: right entity to compare.
 /// - Returns: result of comparison.
-func ==<T>(lhs: T, rhs: T) -> Bool where T: Entity {
+func ==<T> (lhs: T, rhs: T) -> Bool where T: Entity {
     return lhs.equals(rhs)
 }

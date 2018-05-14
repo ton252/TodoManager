@@ -34,7 +34,7 @@ excluded:
 comma: error
 
 identifier_name:
-  min_length: 2
+  min_length: 1
   max_length: 60
 
 type_body_length:
