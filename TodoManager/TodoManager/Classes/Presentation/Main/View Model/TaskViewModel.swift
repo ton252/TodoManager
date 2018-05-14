@@ -10,36 +10,56 @@ import Foundation
 
 
 struct TaskViewModel: ViewModel {
-
+    
+    let entityId: String
     var title: String?
     var description: String?
-    var completed: Bool = false
-    var date: Date?
-    var reminderTime: TimeInterval?
-    
+    var completed: Bool
+    var date: Date
+    var reminderTime: TimeInterval
+    var isNew: Bool
+
     let availableReminderTimes: [TimeInterval] =
         [5.0 * 60.0,
          10.0 * 60.0,
          15.0 * 60.0]
-    
+
 
     var creationDateFromatted: String? {
-        guard let date = date else { return nil }
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMMM HH:mm"
         return formatter.string(from: date)
     }
     
-    init(title: String?,
-         description: String?,
-         completed: Bool,
-         date: Date? = nil,
-         reminderTime: TimeInterval? = nil) {
+    init(entityId: String = "",
+         title: String? = nil,
+         description: String? = nil,
+         completed: Bool = false,
+         date: Date = Date(),
+         reminderTime: TimeInterval = 0,
+         isNew: Bool = true) {
+        self.entityId = entityId
         self.title = title
         self.description = description
         self.date = date
         self.completed = completed
         self.reminderTime = reminderTime
+        self.isNew = isNew
+    }
+    
+}
+
+extension TaskViewModel {
+    
+    init(task: Task) {
+        self.init(
+            entityId: task.entityId,
+            title: task.title,
+            description: task.taskDescription,
+            completed: task.completed,
+            date: task.date,
+            reminderTime: task.reminderTime,
+            isNew: false)
     }
     
 }

@@ -16,6 +16,18 @@ class NewTaskViewController: MVPMViewController<NewTaskView, NewTaskPresentation
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        bindEvents()
+    }
+    
+    
+    // MARK: - Bind Events
+    
+    private func bindEvents() {
+        customView.saveButtonHandler = { [unowned self] task in
+            self.presentationModel.task = task
+            self.presentationModel.saveTask()
+            self.dismiss(animated: true)
+        }
     }
     
     
@@ -28,6 +40,9 @@ class NewTaskViewController: MVPMViewController<NewTaskView, NewTaskPresentation
     }
     
     private func addRemoveBarButtonItem() {
+        guard !presentationModel.task.isNew else {
+            return
+        }
         let item = UIBarButtonItem(
             barButtonSystemItem: .trash,
             target: self,

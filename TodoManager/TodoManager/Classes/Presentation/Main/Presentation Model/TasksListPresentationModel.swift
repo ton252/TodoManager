@@ -11,6 +11,9 @@ import Foundation
 
 final class TasksListPresentationModel: TablePresentationModel {
     
+    var openTaskHandler: ((TaskViewModel) -> Void)?
+    var openNewTaskHandler: VoidClosure?
+    
     enum FilterType: Int {
         case upcomming = 0
         case completed = 1
@@ -19,8 +22,8 @@ final class TasksListPresentationModel: TablePresentationModel {
     }
     
     var filter: FilterType = .upcomming
-    var openTaskHandler: ((TaskViewModel) -> Void)?
-    var openNewTaskHandler: VoidClosure?
+    
+    private let tasksService = ServiceLayer.instance.tasksService
     
     private var tasks = [TaskViewModel]()
     
@@ -41,22 +44,28 @@ final class TasksListPresentationModel: TablePresentationModel {
     }
     
     func loadTasks() {
-        // TODO: - Replace with loading from storage
-        var tasks = [TaskViewModel]()
-        for i in 0..<100 {
-            let title = "Title \(i)"
-            let description = "Description \(i)\nDescription \(i)\nDescription \(i)"
-            let task = TaskViewModel(
-                title: title,
-                description: description,
-                completed: (i % 2 == 0),
-                date: Date())
-
-            tasks.append(task)
-        }
-        self.tasks = tasks
+        tasks = tasksService
+            .obtainAllTasks()
+            .compactMap { TaskViewModel(task: $0) }
         viewModels = filter(tasks: tasks, filter: filter)
         state = .rich
+//        // TODO: - Replace with loading from storage
+//        var tasks = [TaskViewModel]()
+//        for i in 0..<100 {
+//            let title = "Title \(i)"
+//            let description = "Description \(i)\nDescription \(i)\nDescription \(i)"
+//            let task = TaskViewModel(
+//                title: title,
+//                description: description,
+//                completed: (i % 2 == 0),
+//                date: Date(),
+//                isNew: false)
+//
+//            tasks.append(task)
+//        }
+//        self.tasks = tasks
+//        viewModels = filter(tasks: tasks, filter: filter)
+//        state = .rich
     }
     
     func filterTasks() {

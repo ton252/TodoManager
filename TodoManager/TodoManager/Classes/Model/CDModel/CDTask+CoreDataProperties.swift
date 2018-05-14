@@ -13,13 +13,10 @@ import CoreData
 
 extension CDTask {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<CDTask> {
-        return NSFetchRequest<CDTask>(entityName: "CDTask")
-    }
-
-    @NSManaged public var title: String?
-    @NSManaged public var taskDescription: String?
-    @NSManaged public var date: NSDate?
+    @NSManaged public var entryId: String
+    @NSManaged public var title: String
+    @NSManaged public var taskDescription: String
+    @NSManaged public var date: NSDate
     @NSManaged public var reminderTime: Double
     @NSManaged public var completed: Bool
 
