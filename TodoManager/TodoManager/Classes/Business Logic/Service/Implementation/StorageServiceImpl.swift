@@ -9,6 +9,7 @@
 import CoreData
 
 
+/// Service to incapsulate working with storage. Implemented to facilitate testing
 final class StorageServiceImpl: StorageService {
     
     func setupDAO<Model, CDModel>(translator: CoreDataTranslator<Model, CDModel>) throws

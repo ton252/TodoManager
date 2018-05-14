@@ -79,7 +79,7 @@ typealias CellMapper = (ViewModelType) -> ListCell.Type
 /// Presentation model for working with tabular data representation
 class TablePresentationModel: PresentationModel, UITableViewDataSource {
     
-    // MARK: Properties
+    // MARK: - Public Properties
     
     /// Sections of the table
     var viewModels: [ViewModel] = []
@@ -92,14 +92,14 @@ class TablePresentationModel: PresentationModel, UITableViewDataSource {
     /// Use to register these classes in the table view
     var possibleCellClasses: [ListCellType] { requiresConcreteImplementation() }
     
-    // MARK: PresentationModel
+    // MARK: - PresentationModel
     
     func process(viewModel: ViewModel) {
         requiresConcreteImplementation()
     }
     
     
-    // MARK: UITableViewDataSource
+    // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -130,7 +130,7 @@ class TablePresentationModel: PresentationModel, UITableViewDataSource {
     }
     
     
-    // MARK: Public
+    // MARK: - Public Methods
     
     /// Handle item selection by index path
     func handleSelection(at indexPath: IndexPath) {

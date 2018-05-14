@@ -11,8 +11,13 @@ import Foundation
 
 final class TasksListPresentationModel: TablePresentationModel {
     
+    // MARK: - Handlers
+    
     var openTaskHandler: ((TaskViewModel) -> Void)?
     var openNewTaskHandler: VoidClosure?
+    
+    
+    // MARK: - Public Properties
     
     enum FilterType: Int {
         case upcomming = 0
@@ -23,25 +28,15 @@ final class TasksListPresentationModel: TablePresentationModel {
     
     var filter: FilterType = .upcomming
     
+    
+    // MARK: - Private Propeties
+    
     private let tasksService = ServiceLayer.instance.tasksService
     
     private var tasks = [TaskViewModel]()
     
-    override var possibleCellClasses: [ListCellType] {
-        let viewModelTypes: [ViewModel.Type] = [TaskViewModel.self]
-        return viewModelTypes.map(cellMapper)
-    }
     
-    override var cellMapper: CellMapper {
-        return { (viewModelType: ViewModel.Type) -> ListCell.Type in
-            switch viewModelType {
-            case is TaskViewModel.Type:
-                return ContainerCell<TaskCellView>.self
-            default:
-                preconditionFailure()
-            }
-        }
-    }
+    // MARK: - Public Methods
     
     func loadTasks() {
         tasks = tasksService
@@ -57,8 +52,30 @@ final class TasksListPresentationModel: TablePresentationModel {
         state = .rich
     }
     
+    
+    // MARK: - Private Methods
+    
     private func filter(tasks: [TaskViewModel], filter: FilterType) -> [TaskViewModel] {
         return tasks.filter { $0.completed == filter.isCompleted }
+    }
+    
+    
+    // MARK: - Table DataSource
+    
+    override var possibleCellClasses: [ListCellType] {
+        let viewModelTypes: [ViewModel.Type] = [TaskViewModel.self]
+        return viewModelTypes.map(cellMapper)
+    }
+    
+    override var cellMapper: CellMapper {
+        return { (viewModelType: ViewModel.Type) -> ListCell.Type in
+            switch viewModelType {
+            case is TaskViewModel.Type:
+                return ContainerCell<TaskCellView>.self
+            default:
+                preconditionFailure()
+            }
+        }
     }
     
     override func process(viewModel: ViewModel) {

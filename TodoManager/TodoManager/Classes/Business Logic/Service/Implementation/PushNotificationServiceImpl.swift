@@ -9,16 +9,28 @@
 import UIKit
 import UserNotifications
 
-
+/// Service for working with push notifications
 final class PushNotificationServiceImpl: NSObject, PushNotificationService {
     
+    
+    // MARK: - Private Properties
+    
+    /// Notification Authorization Options
     private let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+    
+    /// Singleton Notification Center
     private let notificationCenter = UNUserNotificationCenter.current()
+    
+    
+    // MARK: - Initializers
     
     override init() {
         super.init()
         registerCenter()
     }
+    
+    
+    // MARK: - Public Methods
     
     func addPushNotification(for task: Task) {
         let notificationDate = task.date.addingTimeInterval(-task.reminderTime)
@@ -44,6 +56,9 @@ final class PushNotificationServiceImpl: NSObject, PushNotificationService {
         notificationCenter.removePendingNotificationRequests(withIdentifiers: [task.entityId])
     }
     
+    
+    // MARK: - Private Methods
+    
     private func registerCenter() {
         notificationCenter.delegate = self
         notificationCenter.requestAuthorization(options: options, completionHandler: { _, _ in })
@@ -51,6 +66,9 @@ final class PushNotificationServiceImpl: NSObject, PushNotificationService {
     }
     
 }
+
+
+// MARK: - UNUserNotificationCenterDelegate
 
 extension PushNotificationServiceImpl: UNUserNotificationCenterDelegate {
     

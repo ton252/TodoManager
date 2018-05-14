@@ -9,9 +9,17 @@
 import Foundation
 
 
+/// Protocol for working with push notifications
 protocol PushNotificationService {
     
+    /// Method to add push notification to task
+    ///
+    /// - Parameter task: Task
     func addPushNotification(for task: Task)
+    
+    /// Remove pending notification for task
+    ///
+    /// - Parameter task: Task
     func removeNotification(for task: Task)
     
 }

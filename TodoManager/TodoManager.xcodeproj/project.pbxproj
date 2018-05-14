@@ -261,10 +261,8 @@
 		71DA520B20A6D85400BBC917 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				71E9194320A982E400982FD2 /* Protocols */,
-				71E9193020A9600F00982FD2 /* TasksServiceImpl.swift */,
-				71E9194E20A9B9B300982FD2 /* StorageServiceImpl.swift */,
-				71E9195020A9D6EA00982FD2 /* PushNotificationServiceImpl.swift */,
+				71E9195520AA22B900982FD2 /* Implementation */,
+				71E9194320A982E400982FD2 /* Protocol */,
 				71E9194120A9826B00982FD2 /* ServiceLayer.swift */,
 			);
 			path = Service;
@@ -290,6 +288,7 @@
 		71DA520E20A6D85400BBC917 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				71DA525020A7147C00BBC917 /* MainRouter.swift */,
 				71DA521020A6D85400BBC917 /* Presentation Model */,
 				71DA521120A6D85400BBC917 /* View */,
 				71DA521220A6D85400BBC917 /* View Controller */,
@@ -339,7 +338,6 @@
 		71DA521520A6D85400BBC917 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				71DA525020A7147C00BBC917 /* MainRouter.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -373,6 +371,7 @@
 		71DA522A20A6F87500BBC917 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				71DA524320A7138500BBC917 /* Router.swift */,
 				71E9193C20A96C1700982FD2 /* View Model */,
 				71DA525E20A71A2300BBC917 /* Presentation Model */,
 				71DA523520A7039000BBC917 /* View */,
@@ -386,7 +385,6 @@
 			isa = PBXGroup;
 			children = (
 				71DA523320A7034A00BBC917 /* CustomViewProvider.swift */,
-				71DA524320A7138500BBC917 /* Router.swift */,
 				71DA526420A71B9400BBC917 /* BaseClosures.swift */,
 				71DA526820A71E3900BBC917 /* Unimplemented.swift */,
 				71E9194820A9923200982FD2 /* Nil+EmptyString.swift */,
@@ -408,16 +406,12 @@
 		71DA523520A7039000BBC917 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				71E9195620AA2BE100982FD2 /* Extention */,
 				71DA524720A7141300BBC917 /* CustomTableView */,
-				71DA523E20A705FC00BBC917 /* UIView+LoadFromNib.swift */,
-				71DA524520A713A300BBC917 /* WindowHelper.swift */,
 				71DA526A20A725CB00BBC917 /* ContainerCell.swift */,
-				71DA526C20A7261600BBC917 /* LayoutHelper.swift */,
-				71DA527820A7329D00BBC917 /* UITableView+CellHelper.swift */,
 				71DA52BD20A7529A00BBC917 /* TextFieldWithButton.swift */,
 				7150959420A7C05400D81659 /* CircleCheckBoxView.swift */,
 				71E9190C20A8A5CF00982FD2 /* TimePicker.swift */,
-				71E9190E20A8AEB200982FD2 /* UIToolbar+Keyboard.swift */,
 				7150959220A7B1E000D81659 /* RoundedView.swift */,
 			);
 			path = View;
@@ -528,14 +522,36 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
-		71E9194320A982E400982FD2 /* Protocols */ = {
+		71E9194320A982E400982FD2 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				71E9194420A9830000982FD2 /* TasksService.swift */,
 				71E9194C20A9B84F00982FD2 /* StorageService.swift */,
 				71E9195220A9DE2300982FD2 /* PushNotificationService.swift */,
 			);
-			path = Protocols;
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		71E9195520AA22B900982FD2 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				71E9193020A9600F00982FD2 /* TasksServiceImpl.swift */,
+				71E9194E20A9B9B300982FD2 /* StorageServiceImpl.swift */,
+				71E9195020A9D6EA00982FD2 /* PushNotificationServiceImpl.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		71E9195620AA2BE100982FD2 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				71DA527820A7329D00BBC917 /* UITableView+CellHelper.swift */,
+				71E9190E20A8AEB200982FD2 /* UIToolbar+Keyboard.swift */,
+				71DA526C20A7261600BBC917 /* LayoutHelper.swift */,
+				71DA523E20A705FC00BBC917 /* UIView+LoadFromNib.swift */,
+				71DA524520A713A300BBC917 /* WindowHelper.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

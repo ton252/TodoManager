@@ -23,6 +23,7 @@ final class NewTaskView: UIView {
     
     var saveButtonHandler: ((TaskViewModel) -> Void)!
     
+    
     // MARK: - IBOutlets
     
     @IBOutlet var scrollView: UIScrollView! {

@@ -10,6 +10,8 @@ import UIKit
 
 final class TaskCellView: UIView, ViewModelConfigurable {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet var contentView: UIView! {
         willSet {
             newValue.backgroundColor = .tdElement
@@ -39,6 +41,9 @@ final class TaskCellView: UIView, ViewModelConfigurable {
     }
     @IBOutlet var checkBox: CircleCheckBoxView!
     
+    
+    // MARK: - View LyfeCycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
@@ -59,6 +64,5 @@ final class TaskCellView: UIView, ViewModelConfigurable {
         titleLabel.text = nil
         descriptionLabel.text = nil
     }
-    
     
 }
