@@ -7,7 +7,10 @@
 //
 
 import XCTest
+import CoreData
 @testable import TodoManager
+
+
 
 class TodoManagerTests: XCTestCase {
     

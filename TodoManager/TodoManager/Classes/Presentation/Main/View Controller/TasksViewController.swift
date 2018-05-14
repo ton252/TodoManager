@@ -18,6 +18,10 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
         super.viewDidLoad()
         configureUI()
         bindEvents()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadTasks()
     }
     

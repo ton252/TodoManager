@@ -15,7 +15,7 @@ class TimePicker: UIPickerView {
     
     var timeList = [TimeInterval]() {
         didSet {
-            if timeList.count > 0 { time = timeList[0] }
+            time = timeList.count > 0 ? timeList[0] : 0
             reloadAllComponents()
         }
     }

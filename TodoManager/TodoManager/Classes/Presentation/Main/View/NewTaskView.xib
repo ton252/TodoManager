@@ -91,6 +91,9 @@
                                         </label>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWH-e9-HSP">
                                             <rect key="frame" x="286" y="10" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="switcherChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="Bwi-yc-qbX"/>
+                                            </connections>
                                         </switch>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,6 +153,9 @@
                             <state key="normal" title="Save">
                                 <color key="titleColor" red="0.96474987270000001" green="0.9645984769" blue="0.96862930059999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </state>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qxv-xW-Sjh"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
