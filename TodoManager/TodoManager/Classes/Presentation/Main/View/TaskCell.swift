@@ -8,11 +8,11 @@
 
 import UIKit
 
-final class TaskCellView: UIView, ViewModelConfigurable {
+final class TaskCell: ListCell {
     
     // MARK: - IBOutlets
     
-    @IBOutlet var contentView: UIView! {
+    @IBOutlet var containerView: UIView! {
         willSet {
             newValue.backgroundColor = .tdElement
             newValue.layer.masksToBounds = true
@@ -42,24 +42,38 @@ final class TaskCellView: UIView, ViewModelConfigurable {
     @IBOutlet var checkBox: CircleCheckBoxView!
     
     
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        let alpha: CGFloat = highlighted ? 0.5 : 1
+        if animated {
+            UIView.animate(withDuration: 0.3) { [unowned self] in
+                self.alpha = alpha
+            }
+        } else {
+            self.alpha = alpha
+        }
+    }
+    
+    
     // MARK: - View LyfeCycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
         backgroundColor = .clear
     }
     
     
     // MARK: - ViewModelConfigurable
     
-    func configure(for viewModel: TaskViewModel) {
+    override func configure(for viewModel: ViewModel) {
+        guard let viewModel = viewModel as? TaskViewModel else { return }
         dateLabel.text = viewModel.creationDateFromatted
         titleLabel.text = viewModel.title
         descriptionLabel.text = viewModel.description
         checkBox.isChecked = viewModel.completed
     }
     
-    func clear() {
+    override func clear() {
         dateLabel.text = nil
         titleLabel.text = nil
         descriptionLabel.text = nil

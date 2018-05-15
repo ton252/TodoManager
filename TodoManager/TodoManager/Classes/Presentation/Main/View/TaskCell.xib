@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="TaskCellView" id="iN0-l3-epB" customClass="TaskCellView" customModule="TodoManager" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="TaskCellView" id="iN0-l3-epB" customClass="TaskCell" customModule="TodoManager" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -88,7 +88,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="checkBox" destination="6vi-X6-RWg" id="hpt-RB-zP0"/>
-                <outlet property="contentView" destination="wEe-4k-Ft4" id="dc6-if-L9y"/>
+                <outlet property="containerView" destination="wEe-4k-Ft4" id="6Jq-ty-TZq"/>
                 <outlet property="dateLabel" destination="6Ox-8r-Ydz" id="caM-nY-SAV"/>
                 <outlet property="descriptionLabel" destination="2WB-V4-bD7" id="85C-6V-P8a"/>
                 <outlet property="headerView" destination="R16-WF-OBc" id="Rdt-2p-npa"/>
