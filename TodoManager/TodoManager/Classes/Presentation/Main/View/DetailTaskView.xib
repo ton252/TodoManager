@@ -35,10 +35,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0r-o2-NhL" customClass="RoundedView" customModule="TodoManager" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="34" width="327" height="50"/>
+                                            <rect key="frame" x="0.0" y="34" width="343" height="50"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter task title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W0b-8M-PdB">
-                                                    <rect key="frame" x="8" y="14.5" width="311" height="21"/>
+                                                    <rect key="frame" x="8" y="14.5" width="327" height="21"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -55,13 +55,13 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="f0r-o2-NhL" firstAttribute="leading" secondItem="kQu-5k-UHf" secondAttribute="leading" constant="8" id="2e5-b5-lgM"/>
+                                        <constraint firstItem="f0r-o2-NhL" firstAttribute="leading" secondItem="kQu-5k-UHf" secondAttribute="leading" id="2e5-b5-lgM"/>
                                         <constraint firstAttribute="trailing" secondItem="YpL-ah-VTu" secondAttribute="trailing" constant="8" id="4U5-dc-4Sl"/>
                                         <constraint firstItem="YpL-ah-VTu" firstAttribute="leading" secondItem="kQu-5k-UHf" secondAttribute="leading" constant="8" id="5R6-78-eIj"/>
                                         <constraint firstAttribute="bottom" secondItem="f0r-o2-NhL" secondAttribute="bottom" constant="8" id="ZjI-3V-pqA"/>
                                         <constraint firstItem="YpL-ah-VTu" firstAttribute="top" secondItem="kQu-5k-UHf" secondAttribute="top" constant="8" id="k7o-Wn-Abv"/>
                                         <constraint firstItem="f0r-o2-NhL" firstAttribute="top" secondItem="YpL-ah-VTu" secondAttribute="bottom" constant="8" id="oel-hv-CFC"/>
-                                        <constraint firstAttribute="trailing" secondItem="f0r-o2-NhL" secondAttribute="trailing" constant="8" id="x8N-P5-4p4"/>
+                                        <constraint firstAttribute="trailing" secondItem="f0r-o2-NhL" secondAttribute="trailing" id="x8N-P5-4p4"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xR-Ih-Wr8">
@@ -74,10 +74,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vy-0j-vo3" customClass="RoundedView" customModule="TodoManager" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="34" width="327" height="50"/>
+                                            <rect key="frame" x="0.0" y="34" width="343" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTm-Te-YhR" customClass="DateFieldView" customModule="TodoManager" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="311" height="34"/>
+                                                    <rect key="frame" x="8" y="8" width="327" height="34"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="wGx-gN-Zpf"/>
@@ -98,9 +98,9 @@
                                         <constraint firstAttribute="trailing" secondItem="Jvx-n5-W8I" secondAttribute="trailing" constant="8" id="AMk-1F-B6f"/>
                                         <constraint firstItem="1vy-0j-vo3" firstAttribute="top" secondItem="Jvx-n5-W8I" secondAttribute="bottom" constant="8" id="COG-TA-Phd"/>
                                         <constraint firstAttribute="bottom" secondItem="1vy-0j-vo3" secondAttribute="bottom" constant="9" id="IFw-l5-I9a"/>
-                                        <constraint firstItem="1vy-0j-vo3" firstAttribute="leading" secondItem="7xR-Ih-Wr8" secondAttribute="leading" constant="8" id="XHr-YY-g5B"/>
+                                        <constraint firstItem="1vy-0j-vo3" firstAttribute="leading" secondItem="7xR-Ih-Wr8" secondAttribute="leading" id="XHr-YY-g5B"/>
                                         <constraint firstItem="Jvx-n5-W8I" firstAttribute="leading" secondItem="7xR-Ih-Wr8" secondAttribute="leading" constant="8" id="bql-zH-N51"/>
-                                        <constraint firstAttribute="trailing" secondItem="1vy-0j-vo3" secondAttribute="trailing" constant="8" id="rkQ-9I-R3Y"/>
+                                        <constraint firstAttribute="trailing" secondItem="1vy-0j-vo3" secondAttribute="trailing" id="rkQ-9I-R3Y"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iit-pF-GOm">
@@ -113,10 +113,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5Z-1l-jvX" customClass="RoundedView" customModule="TodoManager" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="33.5" width="327" height="50"/>
+                                            <rect key="frame" x="0.0" y="33.5" width="343" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkS-YY-owV" customClass="ReminderTimeFieldView" customModule="TodoManager" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="8" width="311" height="34"/>
+                                                    <rect key="frame" x="8" y="8" width="327" height="34"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="lPY-pn-ppo"/>
@@ -133,10 +133,10 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="K5Z-1l-jvX" firstAttribute="leading" secondItem="iit-pF-GOm" secondAttribute="leading" constant="8" id="56j-VW-5uZ"/>
+                                        <constraint firstItem="K5Z-1l-jvX" firstAttribute="leading" secondItem="iit-pF-GOm" secondAttribute="leading" id="56j-VW-5uZ"/>
                                         <constraint firstAttribute="bottom" secondItem="K5Z-1l-jvX" secondAttribute="bottom" constant="8" id="A2I-Yr-fxN"/>
                                         <constraint firstItem="K5Z-1l-jvX" firstAttribute="top" secondItem="Znb-fX-G7W" secondAttribute="bottom" constant="8" id="MXc-wy-dHK"/>
-                                        <constraint firstAttribute="trailing" secondItem="K5Z-1l-jvX" secondAttribute="trailing" constant="8" id="O97-jI-2vw"/>
+                                        <constraint firstAttribute="trailing" secondItem="K5Z-1l-jvX" secondAttribute="trailing" id="O97-jI-2vw"/>
                                         <constraint firstAttribute="trailing" secondItem="Znb-fX-G7W" secondAttribute="trailing" constant="8" id="T40-kI-f7h"/>
                                         <constraint firstItem="Znb-fX-G7W" firstAttribute="top" secondItem="iit-pF-GOm" secondAttribute="top" constant="8" id="dam-eY-wBq"/>
                                         <constraint firstItem="Znb-fX-G7W" firstAttribute="leading" secondItem="iit-pF-GOm" secondAttribute="leading" constant="8" id="uAh-uu-G9r"/>
@@ -146,7 +146,7 @@
                                     <rect key="frame" x="0.0" y="300.5" width="343" height="98"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HRX-zD-m3P" customClass="RoundedView" customModule="TodoManager" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="24" width="327" height="50"/>
+                                            <rect key="frame" x="0.0" y="24" width="343" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CompletedLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVM-qK-WMx">
                                                     <rect key="frame" x="8" y="15.5" width="126" height="20.5"/>
@@ -155,7 +155,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWH-e9-HSP">
-                                                    <rect key="frame" x="270" y="10" width="51" height="31"/>
+                                                    <rect key="frame" x="286" y="10" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="switcherChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="Bwi-yc-qbX"/>
                                                     </connections>
@@ -173,9 +173,9 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="HRX-zD-m3P" secondAttribute="bottom" constant="24" id="Mc0-ii-Zy9"/>
-                                        <constraint firstAttribute="trailing" secondItem="HRX-zD-m3P" secondAttribute="trailing" constant="8" id="mFv-MO-sWT"/>
+                                        <constraint firstAttribute="trailing" secondItem="HRX-zD-m3P" secondAttribute="trailing" id="mFv-MO-sWT"/>
                                         <constraint firstItem="HRX-zD-m3P" firstAttribute="top" secondItem="kh5-FV-ylZ" secondAttribute="top" constant="24" id="q4q-Mk-fq1"/>
-                                        <constraint firstItem="HRX-zD-m3P" firstAttribute="leading" secondItem="kh5-FV-ylZ" secondAttribute="leading" constant="8" id="x5c-uP-fbB"/>
+                                        <constraint firstItem="HRX-zD-m3P" firstAttribute="leading" secondItem="kh5-FV-ylZ" secondAttribute="leading" id="x5c-uP-fbB"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utk-W2-yac" customClass="RoundedView" customModule="TodoManager" customModuleProvider="target">
