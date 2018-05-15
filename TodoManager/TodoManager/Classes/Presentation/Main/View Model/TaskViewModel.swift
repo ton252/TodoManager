@@ -64,8 +64,8 @@ extension Task {
     convenience init(viewModel: TaskViewModel) {
         self.init(
             entityId: viewModel.entityId,
-            title: viewModel.title.nilIfEmpty ?? "No Title",
-            taskDescription: viewModel.description.nilIfEmpty ?? "No description",
+            title: viewModel.title.nilIfEmpty ?? "No Title".localized,
+            taskDescription: viewModel.description.nilIfEmpty ?? "No description".localized,
             date: (viewModel.date ?? Date()),
             reminderTime: viewModel.reminderTime?.rawValue ?? 0,
             completed: viewModel.completed)

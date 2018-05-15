@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  TodoManager
+
+  Created by Anton Polyakov on 15/05/2018.
+  Copyright © 2018 ton252. All rights reserved.
+*/
+
+
+"No Title" = "Без названия";
+"Description" = "Описание";
+"No description" = "Описание отсутсвует";
+"Upcomming" = "Предстоящие";
+"Completed" = "Выполненые";
+"Title" = "Название";
+"Due time" = "Выполнить к";
+"Remind me in" = "Напомнить за";
+"Enter task name" = "Введите название задачи";
+"Select task date" = "Выберите дату";
+"Select task reminder time" = "Выберите интервал";
+"Completed" = "Выполнено";
+"Change" = "Изменить";
+"Save" = "Сохранить";
+
+
+"1 min" = "1 мин";
+"5 min" = "5 мин";
+"1 hour" = "1 час";
+"1 day" = "1 день";
+"1 week" = "1 неделя";
+

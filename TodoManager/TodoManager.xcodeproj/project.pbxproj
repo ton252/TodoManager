@@ -13,6 +13,8 @@
 		71BF825520AAC07F007D430A /* DateFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF825420AAC07F007D430A /* DateFieldView.swift */; };
 		71BF825B20AADFF2007D430A /* ReminderTimeFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF825A20AADFF2007D430A /* ReminderTimeFieldView.swift */; };
 		71BF825D20AAE6A0007D430A /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF825C20AAE6A0007D430A /* Date+Helper.swift */; };
+		71BF826120AB0121007D430A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71BF826320AB0121007D430A /* Localizable.strings */; };
+		71BF826620AB0332007D430A /* Strings+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF826520AB0332007D430A /* Strings+Localization.swift */; };
 		71DA51EF20A6D75A00BBC917 /* TodoManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA51EE20A6D75A00BBC917 /* TodoManagerTests.swift */; };
 		71DA51FA20A6D75A00BBC917 /* TodoManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA51F920A6D75A00BBC917 /* TodoManagerUITests.swift */; };
 		71DA522220A6D85400BBC917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71DA521720A6D85400BBC917 /* Assets.xcassets */; };
@@ -95,6 +97,10 @@
 		71BF825420AAC07F007D430A /* DateFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFieldView.swift; sourceTree = "<group>"; };
 		71BF825A20AADFF2007D430A /* ReminderTimeFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTimeFieldView.swift; sourceTree = "<group>"; };
 		71BF825C20AAE6A0007D430A /* Date+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helper.swift"; sourceTree = "<group>"; };
+		71BF825E20AB009E007D430A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		71BF826220AB0121007D430A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71BF826420AB0124007D430A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71BF826520AB0332007D430A /* Strings+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Localization.swift"; sourceTree = "<group>"; };
 		71DA51D320A6D75900BBC917 /* TodoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DA51EA20A6D75A00BBC917 /* TodoManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DA51EE20A6D75A00BBC917 /* TodoManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManagerTests.swift; sourceTree = "<group>"; };
@@ -372,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				71DA521E20A6D85400BBC917 /* Info.plist */,
+				71BF826320AB0121007D430A /* Localizable.strings */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -397,6 +404,7 @@
 				71DA526820A71E3900BBC917 /* Unimplemented.swift */,
 				71E9194820A9923200982FD2 /* Nil+EmptyString.swift */,
 				71BF825C20AAE6A0007D430A /* Date+Helper.swift */,
+				71BF826520AB0332007D430A /* Strings+Localization.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -650,6 +658,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 71DA51CA20A6D75900BBC917;
 			productRefGroup = 71DA51D420A6D75900BBC917 /* Products */;
@@ -669,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DA525D20A719C800BBC917 /* CustomTableView.xib in Resources */,
+				71BF826120AB0121007D430A /* Localizable.strings in Resources */,
 				71DA522320A6D85400BBC917 /* LaunchScreen.storyboard in Resources */,
 				71DA528120A73E2B00BBC917 /* DetailTaskView.xib in Resources */,
 				71DA522220A6D85400BBC917 /* Assets.xcassets in Resources */,
@@ -729,6 +739,7 @@
 				71E9192820A95B4800982FD2 /* CoreDataConfiguration.swift in Sources */,
 				71E9192A20A95B4800982FD2 /* CoreDataTranslator.swift in Sources */,
 				71DA528320A7494B00BBC917 /* ModallyPresentedNavigationControllerDelegate.swift in Sources */,
+				71BF826620AB0332007D430A /* Strings+Localization.swift in Sources */,
 				71DA527920A7329D00BBC917 /* UITableView+CellHelper.swift in Sources */,
 				71DA524F20A7147300BBC917 /* ApplicationController.swift in Sources */,
 				71BF825D20AAE6A0007D430A /* Date+Helper.swift in Sources */,
@@ -804,10 +815,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		71BF826320AB0121007D430A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71BF826220AB0121007D430A /* en */,
+				71BF826420AB0124007D430A /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		71DA521820A6D85400BBC917 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				71DA521920A6D85400BBC917 /* Base */,
+				71BF825E20AB009E007D430A /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -819,6 +840,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -879,6 +901,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

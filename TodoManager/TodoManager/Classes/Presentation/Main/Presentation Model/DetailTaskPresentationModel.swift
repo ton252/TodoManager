@@ -56,7 +56,7 @@ final class DetailTaskPresentationModel: PresentationModel {
         return TaskViewModel(
             entityId: UUID().uuidString,
             title: "",
-            description: "No description",
+            description: "Description".localized,
             completed: false)
     }
 }

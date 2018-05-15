@@ -114,9 +114,9 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
     private func segmentItemName(for type: TasksListPresentationModel.FilterType) -> String {
         switch type {
         case .upcomming:
-            return "Upcomming"
+            return "Upcomming".localized
         case .completed:
-            return "Completed"
+            return "Completed".localized
         }
     }
     

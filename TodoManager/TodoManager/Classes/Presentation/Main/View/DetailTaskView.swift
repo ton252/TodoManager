@@ -11,16 +11,17 @@ import UIKit
 final class DetailTaskView: UIView {
     
     private enum Constants {
-        static let titleLabel = "Title"
-        static let dateLabel = "Due time"
-        static let reminderTimeLabel = "Remind me in"
-        static let titlePlaceholder = "Enter task name"
-        static let datePlacholder = "Select task date"
-        static let timePlaceholder = "Select task reminder time"
-        static let completedTitle = "Completed"
-        static let changeButtonTitle = "Change"
-        static let saveButtonTitle = "Save"
+        static let titleLabel = "Title".localized
+        static let dateLabel = "Due time".localized
+        static let reminderTimeLabel = "Remind me in".localized
+        static let titlePlaceholder = "Enter task name".localized
+        static let datePlacholder = "Select task date".localized
+        static let timePlaceholder = "Select task reminder time".localized
+        static let completedTitle = "Completed".localized
+        static let changeButtonTitle = "Change".localized
+        static let saveButtonTitle = "Save".localized
     }
+    
     
     // MARK: - Handlers
     

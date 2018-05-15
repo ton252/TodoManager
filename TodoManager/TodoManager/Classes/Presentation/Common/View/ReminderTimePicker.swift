@@ -19,15 +19,15 @@ enum ReminderTime: TimeInterval {
     var formattedString: String {
         switch self {
         case .oneMin:
-            return "1 min"
+            return "1 min".localized
         case .fiveMin:
-            return "5 min"
+            return "5 min".localized
         case .oneHour:
-            return "1 hour"
+            return "1 hour".localized
         case .oneDay:
-            return "1 day"
+            return "1 day".localized
         case .oneWeek:
-            return "1 week"
+            return "1 week".localized
         }
     }
 }
