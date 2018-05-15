@@ -11,6 +11,9 @@ import UIKit
 final class DetailTaskView: UIView {
     
     private enum Constants {
+        static let titleLabel = "Title"
+        static let dateLabel = "Due time"
+        static let reminderTimeLabel = "Notification"
         static let titlePlaceholder = "Enter task name"
         static let datePlacholder = "Select task date"
         static let timePlaceholder = "Select task reminder time"
@@ -34,6 +37,22 @@ final class DetailTaskView: UIView {
     @IBOutlet var contentView: UIView! {
         willSet {
             newValue.backgroundColor = .clear
+        }
+    }
+    
+    @IBOutlet var titleLabel: UILabel! {
+        willSet {
+            newValue.text = Constants.titleLabel
+        }
+    }
+    @IBOutlet var dateLabel: UILabel! {
+        willSet {
+            newValue.text = Constants.dateLabel
+        }
+    }
+    @IBOutlet var reminderTimeLabel: UILabel! {
+        willSet {
+            newValue.text = Constants.reminderTimeLabel
         }
     }
     

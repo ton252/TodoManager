@@ -80,7 +80,9 @@ final class TasksListPresentationModel: TablePresentationModel {
     
     override func process(viewModel: ViewModel) {
         if let viewModel = viewModel as? TaskViewModel {
-            openTaskHandler?(viewModel)
+            DispatchQueue.main.async { [unowned self] in
+                self.openTaskHandler?(viewModel)
+            }
         }
     }
     
