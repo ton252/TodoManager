@@ -162,21 +162,21 @@ final class DetailTaskView: UIView {
     }
     
     private func dateChanged(_ date: Date?) -> String? {
+        viewModel.date = date
         guard let date = date else {
             return nil
         }
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMMM HH:mm"
-        viewModel.date = date
         
         return formatter.string(from: date)
     }
     
     private func timeChanged(_ time: ReminderTime?) -> String? {
+        viewModel.reminderTime = time
         guard let time = time else {
             return nil
         }
-        viewModel.reminderTime = time
         return time.formattedString
     }
     

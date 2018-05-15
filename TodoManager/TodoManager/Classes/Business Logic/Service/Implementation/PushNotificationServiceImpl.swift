@@ -12,11 +12,14 @@ import UserNotifications
 /// Service for working with push notifications
 final class PushNotificationServiceImpl: NSObject, PushNotificationService {
     
+    typealias NotificationResponseHandler = (UNUserNotificationCenter, UNNotificationResponse) -> Void
+    
+    // MARK: - Handlers
+    
+    var notificationResponse: NotificationResponseHandler?
+    
     
     // MARK: - Private Properties
-    
-    /// Notification Authorization Options
-    private let options: UNAuthorizationOptions = [.alert, .badge, .sound]
     
     /// Singleton Notification Center
     private let notificationCenter = UNUserNotificationCenter.current()
@@ -64,7 +67,9 @@ final class PushNotificationServiceImpl: NSObject, PushNotificationService {
     
     private func registerCenter() {
         notificationCenter.delegate = self
-        notificationCenter.requestAuthorization(options: options, completionHandler: { _, _ in })
+        notificationCenter.requestAuthorization(
+            options: [.alert, .badge, .sound],
+            completionHandler: { _, _ in })
         UIApplication.shared.registerForRemoteNotifications()
     }
     
@@ -79,6 +84,17 @@ extension PushNotificationServiceImpl: UNUserNotificationCenterDelegate {
         _ center: UNUserNotificationCenter,
         willPresent notification: UNNotification,
         withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
         completionHandler([.alert, .badge, .sound])
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        notificationResponse?(center, response)
+        completionHandler()
+    }
+    
+    
 }

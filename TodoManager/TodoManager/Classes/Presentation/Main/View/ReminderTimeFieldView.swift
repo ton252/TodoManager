@@ -50,8 +50,8 @@ final class ReminderTimeFieldView: TextFieldWithButton {
     }
     
     @objc private func doneButtonPressed() {
-        if let datePicker = textField.inputView as? ReminderTimePicker {
-            valueChanged(datePicker)
+        if let picker = textField.inputView as? ReminderTimePicker {
+            valueChanged(picker)
         }
         endEditing(true)
     }

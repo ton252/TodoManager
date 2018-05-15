@@ -7,10 +7,16 @@
 //
 
 import Foundation
+import UserNotifications
 
 
 /// Protocol for working with push notifications
-protocol PushNotificationService {
+protocol PushNotificationService: AnyObject {
+    
+    typealias NotificationResponseHandler = (UNUserNotificationCenter, UNNotificationResponse) -> Void
+
+    /// Handler called, when application recive notification action
+    var notificationResponse: NotificationResponseHandler? { get set }
     
     /// Method to add push notification to task
     ///

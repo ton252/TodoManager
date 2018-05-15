@@ -17,6 +17,12 @@ protocol TasksService {
     /// - Returns: Array of Task
     func obtainAllTasks() -> [Task]
     
+    
+    /// Obtain task from storage
+    ///
+    /// - Returns: Task
+    func obtainTask(by taskId: String) -> Task?
+    
 
     /// Persist task to storage
     ///

@@ -24,6 +24,13 @@ final class TasksServiceImpl: TasksService {
         return dao.read()
     }
     
+    func obtainTask(by taskId: String) -> Task? {
+        guard let dao = try? storageService.setupDAO(translator: CDTaskTranslator()) else {
+            return nil
+        }
+        return dao.read(taskId)
+    }
+    
     func persistTask(_ task: Task) {
         guard let dao = try? storageService.setupDAO(translator: CDTaskTranslator()) else {
             return
