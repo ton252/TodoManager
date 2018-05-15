@@ -93,7 +93,7 @@ final class TasksListPresentationModel: TablePresentationModel {
         return { (viewModelType: ViewModel.Type) -> ListCell.Type in
             switch viewModelType {
             case is TaskViewModel.Type:
-                return ContainerCell<TaskCellView>.self
+                return TaskCell.self
             default:
                 preconditionFailure()
             }
