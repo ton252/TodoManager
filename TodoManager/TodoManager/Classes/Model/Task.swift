@@ -46,7 +46,7 @@ final class Task: Entity {
         self.title = ""
         self.taskDescription = ""
         self.date = Date()
-        self.reminderTime = .nan
+        self.reminderTime = 0
         self.completed = false
         super.init()
     }

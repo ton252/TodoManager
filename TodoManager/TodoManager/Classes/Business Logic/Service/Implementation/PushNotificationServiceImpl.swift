@@ -33,7 +33,10 @@ final class PushNotificationServiceImpl: NSObject, PushNotificationService {
     // MARK: - Public Methods
     
     func addPushNotification(for task: Task) {
-        let notificationDate = task.date.addingTimeInterval(-task.reminderTime)
+        var notificationDate = task.date.addingTimeInterval(-task.reminderTime)
+        
+        //remove seconds with .zeroSeconds
+        notificationDate = notificationDate.zeroSeconds
         
         let triggerDate = Calendar.current.dateComponents(
             [.year, .month, .day, .hour, .minute, .second],

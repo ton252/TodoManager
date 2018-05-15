@@ -76,7 +76,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vy-0j-vo3" customClass="RoundedView" customModule="TodoManager" customModuleProvider="target">
                                             <rect key="frame" x="8" y="34" width="327" height="50"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTm-Te-YhR" customClass="TextFieldWithButton" customModule="TodoManager" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTm-Te-YhR" customClass="DateFieldView" customModule="TodoManager" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="311" height="34"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -115,7 +115,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5Z-1l-jvX" customClass="RoundedView" customModule="TodoManager" customModuleProvider="target">
                                             <rect key="frame" x="8" y="33.5" width="327" height="50"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkS-YY-owV" customClass="TextFieldWithButton" customModule="TodoManager" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkS-YY-owV" customClass="ReminderTimeFieldView" customModule="TodoManager" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="311" height="34"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
