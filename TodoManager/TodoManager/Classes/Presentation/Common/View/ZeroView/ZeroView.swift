@@ -10,8 +10,10 @@ import UIKit
 
 class ZeroView: UIView, ViewModelConfigurable {
 
-    @IBOutlet var infoLabel: UILabel!
     @IBOutlet var stackView: UIStackView!
+    @IBOutlet var infoLabel: UILabel! {
+        willSet { newValue.textColor = .tdTextGrey } 
+    }
     
     func configure(for viewModel: ZeroViewModel) {
         infoLabel.text = viewModel.info
