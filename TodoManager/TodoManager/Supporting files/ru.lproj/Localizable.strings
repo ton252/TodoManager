@@ -29,3 +29,9 @@
 "1 day" = "1 день";
 "1 week" = "1 неделя";
 
+"The task list is empty. Click \"+ \"\n to add a new task" =
+    "Список задач пуст. Нажмите \"+\",\n чтобы добавить новую задачу";
+
+"You have no completed tasks.\n Create and complete a task to see it in the list" =
+    "У вас нет завершенных задач.\n Создайте и выполните задачу, чтобы увидеть ее в списке";
+

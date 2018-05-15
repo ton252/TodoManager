@@ -9,6 +9,6 @@
 import Foundation
 
 
-struct ZeroViewModel {
-    
+struct ZeroViewModel: ViewModel {
+    let info: String
 }

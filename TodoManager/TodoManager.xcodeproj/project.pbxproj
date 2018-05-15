@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711A10FB20AB1F9100601CAD /* ZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A10FA20AB1F9100601CAD /* ZeroView.swift */; };
+		711A10FD20AB1F9E00601CAD /* ZeroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711A10FC20AB1F9E00601CAD /* ZeroView.xib */; };
 		7150958F20A7AE8C00D81659 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150958E20A7AE8C00D81659 /* Colors.swift */; };
 		7150959320A7B1E000D81659 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150959220A7B1E000D81659 /* RoundedView.swift */; };
 		7150959520A7C05400D81659 /* CircleCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7150959420A7C05400D81659 /* CircleCheckBoxView.swift */; };
@@ -91,6 +93,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		711A10FA20AB1F9100601CAD /* ZeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroView.swift; sourceTree = "<group>"; };
+		711A10FC20AB1F9E00601CAD /* ZeroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZeroView.xib; sourceTree = "<group>"; };
 		7150958E20A7AE8C00D81659 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7150959220A7B1E000D81659 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		7150959420A7C05400D81659 /* CircleCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCheckBoxView.swift; sourceTree = "<group>"; };
@@ -190,6 +194,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		711A10F920AB1F7A00601CAD /* ZeroView */ = {
+			isa = PBXGroup;
+			children = (
+				711A10FA20AB1F9100601CAD /* ZeroView.swift */,
+				711A10FC20AB1F9E00601CAD /* ZeroView.xib */,
+			);
+			path = ZeroView;
+			sourceTree = "<group>";
+		};
 		71DA51CA20A6D75900BBC917 = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +436,7 @@
 		71DA523520A7039000BBC917 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				711A10F920AB1F7A00601CAD /* ZeroView */,
 				71E9195620AA2BE100982FD2 /* Extention */,
 				71DA524720A7141300BBC917 /* CustomTableView */,
 				71DA526A20A725CB00BBC917 /* ContainerCell.swift */,
@@ -679,6 +693,7 @@
 			files = (
 				71DA525D20A719C800BBC917 /* CustomTableView.xib in Resources */,
 				71BF826120AB0121007D430A /* Localizable.strings in Resources */,
+				711A10FD20AB1F9E00601CAD /* ZeroView.xib in Resources */,
 				71DA522320A6D85400BBC917 /* LaunchScreen.storyboard in Resources */,
 				71DA528120A73E2B00BBC917 /* DetailTaskView.xib in Resources */,
 				71DA522220A6D85400BBC917 /* Assets.xcassets in Resources */,
@@ -768,6 +783,7 @@
 				71DA526220A71B2C00BBC917 /* ZeroViewModel.swift in Sources */,
 				71BF825520AAC07F007D430A /* DateFieldView.swift in Sources */,
 				71DA527F20A73E0B00BBC917 /* DetailTaskView.swift in Sources */,
+				711A10FB20AB1F9100601CAD /* ZeroView.swift in Sources */,
 				71E9190F20A8AEB200982FD2 /* UIToolbar+Keyboard.swift in Sources */,
 				71E9194F20A9B9B300982FD2 /* StorageServiceImpl.swift in Sources */,
 				71DA526720A71D8B00BBC917 /* TablePresentationModel.swift in Sources */,

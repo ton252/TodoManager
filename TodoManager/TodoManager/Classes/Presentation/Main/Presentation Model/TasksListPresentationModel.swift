@@ -35,6 +35,15 @@ final class TasksListPresentationModel: TablePresentationModel {
     
     private var tasks = [TaskViewModel]()
     
+    var zeroUpcommingTasks: ZeroViewModel {
+        return ZeroViewModel(
+            info: "The task list is empty. Click \"+ \"\n to add a new task".localized)
+    }
+    var zeroCompletedTasks: ZeroViewModel {
+        return ZeroViewModel(
+            info: "You have no completed tasks.\n Create and complete a task to see it in the list".localized)
+    }
+
     
     // MARK: - Public Methods
     
@@ -44,12 +53,12 @@ final class TasksListPresentationModel: TablePresentationModel {
             .compactMap { TaskViewModel(task: $0) }
             .reversed()
         viewModels = filter(tasks: tasks, filter: filter)
-        state = .rich
+        configureState()
     }
     
     func filterTasks() {
         viewModels = filter(tasks: tasks, filter: filter)
-        state = .rich
+        configureState()
     }
     
     
@@ -57,6 +66,19 @@ final class TasksListPresentationModel: TablePresentationModel {
     
     private func filter(tasks: [TaskViewModel], filter: FilterType) -> [TaskViewModel] {
         return tasks.filter { $0.completed == filter.isCompleted }
+    }
+    
+    private func configureState() {
+        guard viewModels.count == 0 else {
+            state = .rich
+            return
+        }
+        switch filter {
+        case .upcomming:
+            state = .zero(zeroUpcommingTasks)
+        case .completed:
+            state = .zero(zeroCompletedTasks)
+        }
     }
     
     

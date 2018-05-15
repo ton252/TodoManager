@@ -33,13 +33,13 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
         presentationModel.updateStateHandler = { [unowned self] state in
             switch state {
             case .rich:
-                self.reloadData()
+                self.hideZeroView()
+            case .zero(let vm):
+                self.showZeroView(for: vm)
             case .loading:
                 break
-            case .zero(_):
-                break
             }
-            
+            self.reloadData()
         }
     }
     
