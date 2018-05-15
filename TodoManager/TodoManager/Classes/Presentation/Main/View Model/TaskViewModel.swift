@@ -15,17 +15,12 @@ struct TaskViewModel: ViewModel {
     var title: String?
     var description: String?
     var completed: Bool
-    var date: Date
-    var reminderTime: TimeInterval
+    var date: Date?
+    var reminderTime: ReminderTime?
     var isNew: Bool
 
-    let availableReminderTimes: [TimeInterval] =
-        [5.0 * 60.0,
-         10.0 * 60.0,
-         15.0 * 60.0]
-
-
     var creationDateFromatted: String? {
+        guard let date = date else { return nil }
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMMM HH:mm"
         return formatter.string(from: date)
@@ -35,8 +30,8 @@ struct TaskViewModel: ViewModel {
          title: String? = nil,
          description: String? = nil,
          completed: Bool = false,
-         date: Date = Date(),
-         reminderTime: TimeInterval = 0,
+         date: Date? = nil,
+         reminderTime: ReminderTime? = nil,
          isNew: Bool = true) {
         self.entityId = entityId
         self.title = title
@@ -58,7 +53,7 @@ extension TaskViewModel {
             description: task.taskDescription,
             completed: task.completed,
             date: task.date,
-            reminderTime: task.reminderTime,
+            reminderTime: ReminderTime(rawValue: task.reminderTime),
             isNew: false)
     }
     
@@ -69,10 +64,10 @@ extension Task {
     convenience init(viewModel: TaskViewModel) {
         self.init(
             entityId: viewModel.entityId,
-            title: viewModel.title.nilIfEmpty ?? "No Title",
-            taskDescription: viewModel.description.nilIfEmpty ?? "No description",
-            date: viewModel.date,
-            reminderTime: viewModel.reminderTime,
+            title: viewModel.title.nilIfEmpty ?? "No Title".localized,
+            taskDescription: viewModel.description.nilIfEmpty ?? "No description".localized,
+            date: (viewModel.date ?? Date()),
+            reminderTime: viewModel.reminderTime?.rawValue ?? 0,
             completed: viewModel.completed)
     }
     

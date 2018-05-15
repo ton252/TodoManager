@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ApplicationController.loadInitialViewController()
         window?.makeKeyAndVisible()
         
+        ServiceLayer.instance.pushService.notificationResponse =
+            ApplicationController.notificationRouting(_:didReceive:)
+        
         return true
     }
 

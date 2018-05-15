@@ -42,7 +42,6 @@ class TextFieldWithButton: UIView {
     private func addSubViews() {
         addSubview(textField)
         button.setTitle("Change", for: .normal)
-        textField.placeholder = "Select date"
         
         textField.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false

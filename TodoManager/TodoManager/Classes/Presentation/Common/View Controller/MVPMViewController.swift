@@ -11,13 +11,13 @@ import UIKit
 class MVPMViewController<View: UIView, PM: PresentationModel>: CustomViewController<View> {
     
     
-    // MARK: Public Properties
+    // MARK: - Public Properties
     
     let presentationModel: PM
     
     
     
-    // MARK: Initializers
+    // MARK: - Initializers
     
     private override init(nibName nibNameOrNil: String?,
                           bundle nibBundleOrNil: Bundle?) {

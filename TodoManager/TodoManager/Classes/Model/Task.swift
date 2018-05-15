@@ -8,13 +8,24 @@
 
 import Foundation
 
+/// To do Task entity
 final class Task: Entity {
     
+    /// Task Title
     var title: String
+    
+    /// Task Description
     var taskDescription: String
+    
+    /// Task date
     var date: Date
-    var reminderTime: Double
+    
+    /// Time, during which it is necessary to remind
+    var reminderTime: TimeInterval
+    
+    /// Task state. true = completed, false = todo
     var completed: Bool
+    
     
     init(entityId: String,
          title: String,
@@ -35,7 +46,7 @@ final class Task: Entity {
         self.title = ""
         self.taskDescription = ""
         self.date = Date()
-        self.reminderTime = .nan
+        self.reminderTime = 0
         self.completed = false
         super.init()
     }

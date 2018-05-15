@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class TasksViewController: MVPMViewController<CustomTableView, TasksListPresentationModel>, UITableViewDelegate {
     
     var segmentControll: UISegmentedControl!
@@ -32,13 +33,13 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
         presentationModel.updateStateHandler = { [unowned self] state in
             switch state {
             case .rich:
-                self.reloadData()
+                self.hideZeroView()
+            case .zero(let vm):
+                self.showZeroView(for: vm)
             case .loading:
                 break
-            case .zero(_):
-                break
             }
-            
+            self.reloadData()
         }
     }
     
@@ -113,9 +114,9 @@ class TasksViewController: MVPMViewController<CustomTableView, TasksListPresenta
     private func segmentItemName(for type: TasksListPresentationModel.FilterType) -> String {
         switch type {
         case .upcomming:
-            return "Upcomming"
+            return "Upcomming".localized
         case .completed:
-            return "Completed"
+            return "Completed".localized
         }
     }
     

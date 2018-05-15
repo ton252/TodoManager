@@ -9,19 +9,37 @@
 import UIKit
 import UserNotifications
 
-
+/// Service for working with push notifications
 final class PushNotificationServiceImpl: NSObject, PushNotificationService {
     
-    private let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+    typealias NotificationResponseHandler = (UNUserNotificationCenter, UNNotificationResponse) -> Void
+    
+    // MARK: - Handlers
+    
+    var notificationResponse: NotificationResponseHandler?
+    
+    
+    // MARK: - Private Properties
+    
+    /// Singleton Notification Center
     private let notificationCenter = UNUserNotificationCenter.current()
+    
+    
+    // MARK: - Initializers
     
     override init() {
         super.init()
         registerCenter()
     }
     
+    
+    // MARK: - Public Methods
+    
     func addPushNotification(for task: Task) {
-        let notificationDate = task.date.addingTimeInterval(-task.reminderTime)
+        var notificationDate = task.date.addingTimeInterval(-task.reminderTime)
+        
+        //remove seconds with .zeroSeconds
+        notificationDate = notificationDate.zeroSeconds
         
         let triggerDate = Calendar.current.dateComponents(
             [.year, .month, .day, .hour, .minute, .second],
@@ -44,13 +62,21 @@ final class PushNotificationServiceImpl: NSObject, PushNotificationService {
         notificationCenter.removePendingNotificationRequests(withIdentifiers: [task.entityId])
     }
     
+    
+    // MARK: - Private Methods
+    
     private func registerCenter() {
         notificationCenter.delegate = self
-        notificationCenter.requestAuthorization(options: options, completionHandler: { _, _ in })
+        notificationCenter.requestAuthorization(
+            options: [.alert, .badge, .sound],
+            completionHandler: { _, _ in })
         UIApplication.shared.registerForRemoteNotifications()
     }
     
 }
+
+
+// MARK: - UNUserNotificationCenterDelegate
 
 extension PushNotificationServiceImpl: UNUserNotificationCenterDelegate {
     
@@ -58,6 +84,17 @@ extension PushNotificationServiceImpl: UNUserNotificationCenterDelegate {
         _ center: UNUserNotificationCenter,
         willPresent notification: UNNotification,
         withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
         completionHandler([.alert, .badge, .sound])
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        notificationResponse?(center, response)
+        completionHandler()
+    }
+    
+    
 }

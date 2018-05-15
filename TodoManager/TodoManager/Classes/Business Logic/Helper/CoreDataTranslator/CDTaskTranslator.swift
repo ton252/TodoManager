@@ -11,6 +11,7 @@ import Foundation
 
 import CoreData
 
+
 class CDTaskTranslator: CoreDataTranslator<CDTask, Task> {
     
     override func fill(_ entity: Task, fromEntry: CDTask) {

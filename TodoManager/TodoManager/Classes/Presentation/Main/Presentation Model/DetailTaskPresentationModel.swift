@@ -9,17 +9,28 @@
 import Foundation
 
 
-final class NewTaskPresentationModel: PresentationModel {
+final class DetailTaskPresentationModel: PresentationModel {
+    
+    // MARK: - Public Properties
     
     var task: TaskViewModel
+    
+    
+    // MARK: - Private Properties
     
     private let tasksService = ServiceLayer.instance.tasksService
     private let pushService = ServiceLayer.instance.pushService
     
+    
+    // MARK: - Initializers
+    
     init(task: TaskViewModel? = nil, errorHandler: ErrorHandler? = nil) {
-        self.task = task ?? NewTaskPresentationModel.createNewTask()
+        self.task = task ?? DetailTaskPresentationModel.createNewTask()
         super.init(errorHandler: errorHandler)
     }
+    
+    
+    // MARK: - Public Methods
     
     func saveTask() {
         tasksService.persistTask(Task(viewModel: task))
@@ -38,11 +49,14 @@ final class NewTaskPresentationModel: PresentationModel {
         tasksService.eraseTask(by: task.entityId)
     }
     
+    
+    // MARK: - Private Methods
+    
     private static func createNewTask() -> TaskViewModel {
         return TaskViewModel(
             entityId: UUID().uuidString,
             title: "",
-            description: "No description",
+            description: "Description".localized,
             completed: false)
     }
 }

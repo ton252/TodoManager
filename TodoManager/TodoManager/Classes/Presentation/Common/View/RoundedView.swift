@@ -28,5 +28,4 @@ final class RoundedView: UIView {
         backgroundColor = .tdElement
     }
     
-    
 }

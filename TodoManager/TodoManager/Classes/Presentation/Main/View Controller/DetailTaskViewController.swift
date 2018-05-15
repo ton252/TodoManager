@@ -1,5 +1,5 @@
 //
-//  NewTaskViewController.swift
+//  DetailTaskView.swift
 //  TodoManager
 //
 //  Created by Anton Polyakov on 12/05/2018.
@@ -9,7 +9,7 @@
 import UIKit
 
 
-class NewTaskViewController: MVPMViewController<NewTaskView, NewTaskPresentationModel> {
+class DetailTaskViewController: MVPMViewController<DetailTaskView, DetailTaskPresentationModel> {
     
     private let navCloser = ModallyPresentedNavigationControllerDelegate()
     
