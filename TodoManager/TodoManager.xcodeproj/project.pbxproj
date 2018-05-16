@@ -316,7 +316,6 @@
 				71DA521120A6D85400BBC917 /* View */,
 				71DA521220A6D85400BBC917 /* View Controller */,
 				71DA521420A6D85400BBC917 /* View Model */,
-				71DA521520A6D85400BBC917 /* Helper */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -358,13 +357,6 @@
 				71DA527420A72AA600BBC917 /* TaskViewModel.swift */,
 			);
 			path = "View Model";
-			sourceTree = "<group>";
-		};
-		71DA521520A6D85400BBC917 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		71DA521620A6D85400BBC917 /* Resources */ = {
